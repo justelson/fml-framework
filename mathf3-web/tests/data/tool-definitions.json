@@ -1,0 +1,320 @@
+{
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateLinearY",
+        "description": "Calculates y for linear equation y = mx + c",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "m": { "type": "number", "description": "Slope" },
+            "x": { "type": "number", "description": "Input x" },
+            "c": { "type": "number", "description": "Y-intercept" }
+          },
+          "required": ["m", "x", "c"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "solveQuadraticRoots",
+        "description": "Finds roots of ax^2 + bx + c = 0",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "a": { "type": "number" },
+            "b": { "type": "number" },
+            "c": { "type": "number" }
+          },
+          "required": ["a", "b", "c"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "findQuadraticVertex",
+        "description": "Finds turning point of quadratic",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "a": { "type": "number" },
+            "b": { "type": "number" },
+            "c": { "type": "number" }
+          },
+          "required": ["a", "b", "c"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "analyzeDataList",
+        "description": "Computes mean, median, mode for array of numbers",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "values": { "type": "array", "items": { "type": "number" } }
+          },
+          "required": ["values"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateGroupedMean",
+        "description": "Mean for grouped data",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "classMarks": { "type": "array", "items": { "type": "number" } },
+            "frequencies": { "type": "array", "items": { "type": "number" } }
+          },
+          "required": ["classMarks", "frequencies"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateGroupedMedian",
+        "description": "Median for grouped data",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "L": { "type": "number" },
+            "N": { "type": "number" },
+            "nBefore": { "type": "number" },
+            "nWithin": { "type": "number" },
+            "i": { "type": "number" }
+          },
+          "required": ["L", "N", "nBefore", "nWithin", "i"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateGroupedMode",
+        "description": "Mode for grouped data",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "L": { "type": "number" },
+            "t1": { "type": "number" },
+            "t2": { "type": "number" },
+            "i": { "type": "number" }
+          },
+          "required": ["L", "t1", "t2", "i"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateDirectVariation",
+        "description": "Solves y = kx variation",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "x1": { "type": "number" },
+            "y1": { "type": "number" },
+            "x2": { "type": "number" }
+          },
+          "required": ["x1", "y1", "x2"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateInverseVariation",
+        "description": "Solves y = k/x variation",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "x1": { "type": "number" },
+            "y1": { "type": "number" },
+            "x2": { "type": "number" }
+          },
+          "required": ["x1", "y1", "x2"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "solveArithmeticProgression",
+        "description": "AP: nth term and sum",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "a": { "type": "number" },
+            "d": { "type": "number" },
+            "n": { "type": "number" }
+          },
+          "required": ["a", "d", "n"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "solveGeometricProgression",
+        "description": "GP: nth term and sum",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "a": { "type": "number" },
+            "r": { "type": "number" },
+            "n": { "type": "number" }
+          },
+          "required": ["a", "r", "n"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateCompoundInterest",
+        "description": "Compound interest calculation",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "p": { "type": "number" },
+            "r": { "type": "number" },
+            "t": { "type": "number" },
+            "n": { "type": "number" }
+          },
+          "required": ["p", "r", "t"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateCircleProperties",
+        "description": "Circle area and circumference",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": { "type": "number" }
+          },
+          "required": ["radius"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateArcSector",
+        "description": "Arc length and sector area",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": { "type": "number" },
+            "thetaDegrees": { "type": "number" }
+          },
+          "required": ["radius", "thetaDegrees"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateChordLength",
+        "description": "Chord length in circle",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "radius": { "type": "number" },
+            "distance": { "type": "number" }
+          },
+          "required": ["radius", "distance"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateGreatCircle",
+        "description": "Distance along meridian",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "lat1": { "type": "number" },
+            "lat2": { "type": "number" }
+          },
+          "required": ["lat1", "lat2"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateSmallCircle",
+        "description": "Distance along parallel",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "long1": { "type": "number" },
+            "long2": { "type": "number" },
+            "latitude": { "type": "number" }
+          },
+          "required": ["long1", "long2", "latitude"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "calculateHaversine",
+        "description": "Great circle distance",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "lat1": { "type": "number" },
+            "lon1": { "type": "number" },
+            "lat2": { "type": "number" },
+            "lon2": { "type": "number" }
+          },
+          "required": ["lat1", "lon1", "lat2", "lon2"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "solveAccountingEquation",
+        "description": "Assets = Liabilities + Capital",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "assets": { "type": "number" },
+            "liabilities": { "type": "number" },
+            "capital": { "type": "number" }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "generateBalanceSheet",
+        "description": "Generate balance sheet",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "assets": { "type": "number" },
+            "liabilities": { "type": "number" }
+          },
+          "required": ["assets", "liabilities"]
+        }
+      }
+    }
+  ]
+}

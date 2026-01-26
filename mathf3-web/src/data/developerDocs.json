@@ -1,0 +1,294 @@
+{
+  "sections": [
+    {
+      "id": "architecture",
+      "title": "Architecture",
+      "icon": "code",
+      "content": [
+        {
+          "type": "heading",
+          "text": "Project Structure"
+        },
+        {
+          "type": "paragraph",
+          "text": "fML-3 is built with React and Vite, following a modular chapter-based architecture."
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "text": "mathf3-web/\n├── src/\n│   ├── chapters/      # Chapter components\n│   ├── components/    # Reusable UI components\n│   ├── lib/          # Core logic and utilities\n│   │   ├── math.js   # Formula implementations\n│   │   ├── aiTools.js # AI tool definitions\n│   │   └── groqService.js # AI integration\n│   └── styles.css    # Global styles\n├── package.json\n└── vite.config.js"
+        },
+        {
+          "type": "heading",
+          "text": "Key Technologies"
+        },
+        {
+          "type": "list",
+          "items": [
+            "React 18 - UI framework",
+            "Vite - Build tool and dev server",
+            "Chart.js - Data visualization",
+            "Groq SDK - AI integration",
+            "Lucide React - Icon library"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fml-framework",
+      "title": "FML Framework",
+      "icon": "package",
+      "content": [
+        {
+          "type": "heading",
+          "text": "Formula Math Library"
+        },
+        {
+          "type": "paragraph",
+          "text": "The FML Framework is a modular system for building math education applications. It provides reusable formula implementations in Python that can be converted to JavaScript."
+        },
+        {
+          "type": "heading",
+          "text": "Framework Location"
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "text": "fml-framework/\n├── formulas/\n│   ├── algebra.py\n│   ├── statistics.py\n│   ├── geometry.py\n│   ├── sequences.py\n│   ├── earth_geometry.py\n│   └── accounting.py\n├── reference/\n│   └── form3-link.md\n├── README.md\n├── QUICK_START.md\n└── STRUCTURE.md"
+        },
+        {
+          "type": "heading",
+          "text": "Formula Pattern"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def solve_quadratic_roots(a, b, c):\n    \"\"\"\n    Solve quadratic equation ax² + bx + c = 0\n    \n    Args:\n        a (float): Coefficient of x²\n        b (float): Coefficient of x\n        c (float): Constant term\n    \n    Returns:\n        dict: Contains roots and discriminant\n    \"\"\"\n    discriminant = b**2 - 4*a*c\n    # ... implementation\n    return {\"roots\": [...], \"discriminant\": ...}"
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Each formula returns a dictionary with named fields for easy access and AI explanation generation."
+        }
+      ]
+    },
+    {
+      "id": "adding-chapters",
+      "title": "Adding Chapters",
+      "icon": "plus",
+      "content": [
+        {
+          "type": "heading",
+          "text": "Creating a New Chapter"
+        },
+        {
+          "type": "paragraph",
+          "text": "Follow these steps to add a new chapter to the application:"
+        },
+        {
+          "type": "heading",
+          "text": "1. Create Chapter Component"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "text": "// src/chapters/Chapter9.jsx\nimport { useState } from 'react';\nimport Container from '../components/Container.jsx';\n\nexport default function Chapter9() {\n  const [input, setInput] = useState('');\n  const [result, setResult] = useState(null);\n\n  const handleSolve = () => {\n    // Your logic here\n  };\n\n  return (\n    <section className=\"section-stack\">\n      <Container title=\"Your Topic\">\n        {/* Your UI here */}\n      </Container>\n    </section>\n  );\n}"
+        },
+        {
+          "type": "heading",
+          "text": "2. Add to App.jsx"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "text": "import Chapter9 from './chapters/Chapter9.jsx';\n\nconst tabConfig = [\n  // ... existing chapters\n  {\n    id: 'ch9',\n    label: 'Ch 9',\n    title: 'Your Topic',\n    subtitle: 'Brief description',\n    Component: Chapter9,\n  },\n];"
+        },
+        {
+          "type": "heading",
+          "text": "3. Implement Formulas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Add your formula implementations to src/lib/math.js following the existing patterns."
+        }
+      ]
+    },
+    {
+      "id": "ai-integration",
+      "title": "AI Integration",
+      "icon": "brain",
+      "content": [
+        {
+          "type": "heading",
+          "text": "How AI Works"
+        },
+        {
+          "type": "paragraph",
+          "text": "The AI system uses Groq's API with function calling to identify the right formula and generate explanations."
+        },
+        {
+          "type": "heading",
+          "text": "Tool Definition"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "text": "// src/lib/aiTools.js\nexport const mathTools = [\n  {\n    name: 'solveQuadraticRoots',\n    description: 'Solve quadratic equation ax² + bx + c = 0',\n    parameters: {\n      type: 'object',\n      properties: {\n        a: { type: 'number', description: 'Coefficient of x²' },\n        b: { type: 'number', description: 'Coefficient of x' },\n        c: { type: 'number', description: 'Constant term' }\n      },\n      required: ['a', 'b', 'c']\n    }\n  }\n];"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation System"
+        },
+        {
+          "type": "paragraph",
+          "text": "After executing a tool, the AI generates two types of explanations:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Brief: Conversational 2-3 sentence summary",
+            "Detailed: Bullet points with formulas and steps"
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "tip",
+          "text": "The AI uses JSON mode to ensure consistent formatting with markdown support for bold text and formulas."
+        }
+      ]
+    },
+    {
+      "id": "styling",
+      "title": "Styling Guide",
+      "icon": "palette",
+      "content": [
+        {
+          "type": "heading",
+          "text": "CSS Variables"
+        },
+        {
+          "type": "paragraph",
+          "text": "The app uses CSS custom properties for theming. All colors are defined in :root and [data-theme='dark']."
+        },
+        {
+          "type": "code",
+          "language": "css",
+          "text": ":root {\n  --ink: #0b0b0c;          /* Background\n  --oxide: #b13a2f;        /* Primary accent\n  --signal: #f5b623;       /* Highlights\n  --text: #f2ede3;         /* Text color\n  --panel: #141416;        /* Card background\n  --line: #2b2b2f;         /* Borders\n}"
+        },
+        {
+          "type": "heading",
+          "text": "Component Classes"
+        },
+        {
+          "type": "list",
+          "items": [
+            ".section-stack - Vertical layout with gap",
+            ".card - Content container with border",
+            ".mini-panel - Nested panel with inset shadow",
+            ".action - Primary button style",
+            ".result - Output display box",
+            ".explainer - Explanation container"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Dark/Light Theme"
+        },
+        {
+          "type": "paragraph",
+          "text": "Theme is controlled by data-theme attribute on document root. Toggle between 'dark' and 'light' values."
+        }
+      ]
+    },
+    {
+      "id": "deployment",
+      "title": "Deployment",
+      "icon": "rocket",
+      "content": [
+        {
+          "type": "heading",
+          "text": "Building for Production"
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "text": "npm run build"
+        },
+        {
+          "type": "paragraph",
+          "text": "This creates an optimized production build in the dist/ directory."
+        },
+        {
+          "type": "heading",
+          "text": "Environment Variables"
+        },
+        {
+          "type": "paragraph",
+          "text": "Create a .env file for environment-specific configuration:"
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "text": "VITE_GROQ_API_KEY=your_key_here"
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Never commit API keys to version control. Use .env.example as a template."
+        },
+        {
+          "type": "heading",
+          "text": "Deployment Platforms"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Vercel - Zero config deployment",
+            "Netlify - Drag and drop dist folder",
+            "GitHub Pages - Static hosting",
+            "Cloudflare Pages - Fast global CDN"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "extending",
+      "title": "Extending the App",
+      "icon": "puzzle",
+      "content": [
+        {
+          "type": "heading",
+          "text": "Building New Math Apps"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use the FML Framework to create apps for other grade levels:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Copy the mathf3-web structure",
+            "Update formulas from fml-framework/formulas/",
+            "Add new formula files for missing topics",
+            "Update chapter content and titles",
+            "Keep the AI integration system"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example: Form 4 Math"
+        },
+        {
+          "type": "code",
+          "language": "bash",
+          "text": "# Copy structure\ncp -r mathf3-web mathf4-web\n\n# Update package.json name\n# Add new formulas to fml-framework/formulas/\n# Update chapters for Form 4 curriculum"
+        },
+        {
+          "type": "callout",
+          "variant": "tip",
+          "text": "Tell an AI agent: 'Build Form 4 Math using FML Framework' and it will understand the structure."
+        }
+      ]
+    }
+  ]
+}

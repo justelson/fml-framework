@@ -1,0 +1,259 @@
+{
+  "sections": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "icon": "rocket",
+      "content": [
+        {
+          "type": "heading",
+          "text": "Welcome to fML-3"
+        },
+        {
+          "type": "paragraph",
+          "text": "fML-3 (Formula Math Library - Form 3) is an interactive mathematics learning platform designed for Form 3 students. It combines precise calculations with AI-powered explanations to help you understand not just the answers, but the reasoning behind them."
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "text": "Every calculation comes with a conversational explanation that describes what the problem asked for, which formula was applied, and how the answer was obtained."
+        },
+        {
+          "type": "heading",
+          "text": "Quick Start"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Choose a chapter from the sidebar",
+            "Enter your values in the input fields",
+            "Click the solve button to see results",
+            "Read the explanation below each answer",
+            "Try the AI Assist for natural language questions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chapters",
+      "title": "Chapters Overview",
+      "icon": "book",
+      "content": [
+        {
+          "type": "heading",
+          "text": "Available Chapters"
+        },
+        {
+          "type": "chapter",
+          "title": "Ch 1-2: Relations + Functions",
+          "description": "Domain, range, inverse relations, quadratic equations, and function behavior. Learn to plot functions and find turning points."
+        },
+        {
+          "type": "chapter",
+          "title": "Ch 3: Statistics",
+          "description": "Mean, median, mode, grouped data analysis, and statistical visualizations. Master central tendency and data interpretation."
+        },
+        {
+          "type": "chapter",
+          "title": "Ch 4: Rates + Variations",
+          "description": "Direct variation, inverse variation, and practical rate problems. Understand proportional relationships."
+        },
+        {
+          "type": "chapter",
+          "title": "Ch 5: Sequences + Series",
+          "description": "Arithmetic progressions, geometric progressions, and compound interest. Calculate terms and sums efficiently."
+        },
+        {
+          "type": "chapter",
+          "title": "Ch 6: Circles",
+          "description": "Arc length, sector area, chord properties, and circle geometry. Solve real-world circular problems."
+        },
+        {
+          "type": "chapter",
+          "title": "Ch 7: Earth as Sphere",
+          "description": "Great circles, small circles, haversine distance, and navigation. Calculate distances on Earth's surface."
+        },
+        {
+          "type": "chapter",
+          "title": "Ch 8: Accounting",
+          "description": "Balance equations, assets, liabilities, and capital calculations. Understand basic accounting principles."
+        },
+        {
+          "type": "chapter",
+          "title": "AI Assist",
+          "description": "Natural language math solver with detailed explanations and reasoning. Ask questions in plain English."
+        }
+      ]
+    },
+    {
+      "id": "ai-assist",
+      "title": "Using AI Assist",
+      "icon": "brain",
+      "content": [
+        {
+          "type": "heading",
+          "text": "AI-Powered Math Help"
+        },
+        {
+          "type": "paragraph",
+          "text": "The AI Assist feature allows you to ask math questions in natural language and receive detailed, step-by-step explanations."
+        },
+        {
+          "type": "heading",
+          "text": "Setup Required"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Go to Settings tab",
+            "Enter your Groq API key",
+            "Click 'Save Key'",
+            "Return to AI Assist tab"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How to Ask Questions"
+        },
+        {
+          "type": "callout",
+          "variant": "tip",
+          "text": "Be specific! Include all numbers, units, and what you want to find."
+        },
+        {
+          "type": "paragraph",
+          "text": "Good examples:"
+        },
+        {
+          "type": "code",
+          "text": "Find the roots of x² - 5x + 6 = 0"
+        },
+        {
+          "type": "code",
+          "text": "Calculate compound interest on $5000 at 6% for 3 years"
+        },
+        {
+          "type": "code",
+          "text": "Find the 10th term of an AP with first term 5 and common difference 3"
+        },
+        {
+          "type": "heading",
+          "text": "Understanding Explanations"
+        },
+        {
+          "type": "paragraph",
+          "text": "Each answer includes two parts:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Brief: A conversational summary of what was solved",
+            "Detailed: Step-by-step breakdown with formulas and calculations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tips",
+      "title": "Tips & Tricks",
+      "icon": "lightbulb",
+      "content": [
+        {
+          "type": "heading",
+          "text": "Best Practices"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Always include units in your inputs (km, $, degrees, etc.)",
+            "Double-check your values before solving",
+            "Read the explanations to understand the process",
+            "Try different values to see how formulas behave",
+            "Use the example questions as templates"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Keyboard Shortcuts"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Enter: Send message in AI Assist",
+            "Shift+Enter: New line in AI Assist",
+            "Tab: Navigate between input fields"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Common Issues"
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "If AI Assist isn't working, check that you've saved your API key in Settings."
+        },
+        {
+          "type": "paragraph",
+          "text": "Other troubleshooting:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Refresh the page if calculations seem stuck",
+            "Clear your API key and re-enter it if you get errors",
+            "Check your internet connection for AI features",
+            "Make sure you're using valid numbers in input fields"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "Privacy & Data",
+      "icon": "shield",
+      "content": [
+        {
+          "type": "heading",
+          "text": "Your Data is Safe"
+        },
+        {
+          "type": "paragraph",
+          "text": "fML-3 is designed with privacy in mind. Here's what you need to know:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "All calculations happen in your browser",
+            "Your API key is stored locally only",
+            "No data is sent to external servers except Groq API",
+            "No tracking or analytics are implemented",
+            "You can clear your API key anytime"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "API Key Security"
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "text": "Your API key is stored in browser localStorage. Anyone with access to your computer can potentially view it."
+        },
+        {
+          "type": "paragraph",
+          "text": "Best practices:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Don't share your API key with others",
+            "Use a separate API key for this app",
+            "Clear your key when using shared computers",
+            "Monitor your API usage on Groq Console"
+          ]
+        }
+      ]
+    }
+  ]
+}

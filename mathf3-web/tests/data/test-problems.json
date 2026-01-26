@@ -1,0 +1,204 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "category": "Linear Functions",
+      "question": "Find the value of y when x = 5 in the equation y = 3x + 7",
+      "expectedTool": "calculateLinearY",
+      "expectedAnswer": 22,
+      "tolerance": 0.01
+    },
+    {
+      "id": 2,
+      "category": "Quadratic Equations",
+      "question": "Find the roots of the quadratic equation x^2 - 5x + 6 = 0",
+      "expectedTool": "solveQuadraticRoots",
+      "expectedAnswer": [3, 2],
+      "tolerance": 0.01
+    },
+    {
+      "id": 3,
+      "category": "Quadratic Equations",
+      "question": "Find the turning point of the parabola y = 2x^2 - 8x + 5",
+      "expectedTool": "findQuadraticVertex",
+      "expectedAnswer": { "x": 2, "y": -3 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 4,
+      "category": "Statistics",
+      "question": "Calculate the mean, median, and mode of the dataset: 5, 8, 12, 15, 12, 8, 20",
+      "expectedTool": "analyzeDataList",
+      "expectedAnswer": { "mean": 11.43, "median": 12, "mode": "8, 12" },
+      "tolerance": 0.1
+    },
+    {
+      "id": 5,
+      "category": "Statistics - Grouped Data",
+      "question": "Calculate the mean for grouped data with class marks [15, 25, 35, 45] and frequencies [3, 7, 5, 2]",
+      "expectedTool": "calculateGroupedMean",
+      "expectedAnswer": 28.24,
+      "tolerance": 0.1
+    },
+    {
+      "id": 6,
+      "category": "Statistics - Grouped Data",
+      "question": "Find the median for grouped data where the median class has lower boundary 20, total frequency 50, cumulative frequency before median class is 18, frequency within median class is 15, and class interval is 10",
+      "expectedTool": "calculateGroupedMedian",
+      "expectedAnswer": 27.33,
+      "tolerance": 0.1
+    },
+    {
+      "id": 7,
+      "category": "Statistics - Grouped Data",
+      "question": "Calculate the mode for grouped data where modal class lower boundary is 30, difference with previous class frequency is 8, difference with next class frequency is 5, and class interval is 10",
+      "expectedTool": "calculateGroupedMode",
+      "expectedAnswer": 36.15,
+      "tolerance": 0.1
+    },
+    {
+      "id": 8,
+      "category": "Direct Variation",
+      "question": "If y varies directly as x, and y = 20 when x = 4, find y when x = 7",
+      "expectedTool": "calculateDirectVariation",
+      "expectedAnswer": 35,
+      "tolerance": 0.01
+    },
+    {
+      "id": 9,
+      "category": "Inverse Variation",
+      "question": "If y varies inversely as x, and y = 12 when x = 5, find y when x = 3",
+      "expectedTool": "calculateInverseVariation",
+      "expectedAnswer": 20,
+      "tolerance": 0.01
+    },
+    {
+      "id": 10,
+      "category": "Arithmetic Progression",
+      "question": "Find the 10th term and sum of the first 10 terms of an arithmetic progression with first term 5 and common difference 3",
+      "expectedTool": "solveArithmeticProgression",
+      "expectedAnswer": { "nthTerm": 32, "sum": 185 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 11,
+      "category": "Geometric Progression",
+      "question": "Find the 6th term and sum of the first 6 terms of a geometric progression with first term 2 and common ratio 3",
+      "expectedTool": "solveGeometricProgression",
+      "expectedAnswer": { "nthTerm": 486, "sum": 728 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 12,
+      "category": "Compound Interest",
+      "question": "Calculate the compound interest on $5000 invested at 6% per year for 3 years compounded annually",
+      "expectedTool": "calculateCompoundInterest",
+      "expectedAnswer": { "amount": 5955.08, "interest": 955.08 },
+      "tolerance": 1
+    },
+    {
+      "id": 13,
+      "category": "Compound Interest",
+      "question": "If I invest 10000 at 8% interest for 2 years compounded quarterly, what is the total amount?",
+      "expectedTool": "calculateCompoundInterest",
+      "expectedAnswer": { "amount": 11716.59, "interest": 1716.59 },
+      "tolerance": 1
+    },
+    {
+      "id": 14,
+      "category": "Circle Properties",
+      "question": "Find the area and circumference of a circle with radius 7 cm",
+      "expectedTool": "calculateCircleProperties",
+      "expectedAnswer": { "area": 153.94, "circumference": 43.98 },
+      "tolerance": 0.1
+    },
+    {
+      "id": 15,
+      "category": "Arc and Sector",
+      "question": "Calculate the arc length and sector area for a circle with radius 10 cm and central angle 60 degrees",
+      "expectedTool": "calculateArcSector",
+      "expectedAnswer": { "arcLength": 10.47, "sectorArea": 52.36 },
+      "tolerance": 0.1
+    },
+    {
+      "id": 16,
+      "category": "Chord Length",
+      "question": "Find the length of a chord in a circle with radius 13 cm if the perpendicular distance from the center to the chord is 5 cm",
+      "expectedTool": "calculateChordLength",
+      "expectedAnswer": 24,
+      "tolerance": 0.01
+    },
+    {
+      "id": 17,
+      "category": "Great Circle Distance",
+      "question": "Calculate the distance along a meridian between latitude 10°N and latitude 40°N",
+      "expectedTool": "calculateGreatCircle",
+      "expectedAnswer": 3333.6,
+      "tolerance": 10
+    },
+    {
+      "id": 18,
+      "category": "Small Circle Distance",
+      "question": "Find the distance along a parallel at latitude 30°N between longitude 20°E and longitude 50°E",
+      "expectedTool": "calculateSmallCircle",
+      "expectedAnswer": 2879.4,
+      "tolerance": 10
+    },
+    {
+      "id": 19,
+      "category": "Haversine Distance",
+      "question": "Calculate the great circle distance between coordinates (lat: -6.7, lon: 39.2) and (lat: -6.1, lon: 35.7)",
+      "expectedTool": "calculateHaversine",
+      "expectedAnswer": 389.5,
+      "tolerance": 10
+    },
+    {
+      "id": 20,
+      "category": "Accounting Equation",
+      "question": "If a company has assets of 500000 and liabilities of 150000, what is the capital?",
+      "expectedTool": "solveAccountingEquation",
+      "expectedAnswer": 350000,
+      "tolerance": 0.01
+    },
+    {
+      "id": 21,
+      "category": "Accounting Equation",
+      "question": "A business has liabilities of 75000 and capital of 125000. Calculate the total assets.",
+      "expectedTool": "solveAccountingEquation",
+      "expectedAnswer": 200000,
+      "tolerance": 0.01
+    },
+    {
+      "id": 22,
+      "category": "Balance Sheet",
+      "question": "Generate a balance sheet for a company with assets of 800000 and liabilities of 300000",
+      "expectedTool": "generateBalanceSheet",
+      "expectedAnswer": { "assets": 800000, "liabilities": 300000, "capital": 500000 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 23,
+      "category": "Quadratic Equations",
+      "question": "Solve the equation 2x^2 + 7x - 15 = 0",
+      "expectedTool": "solveQuadraticRoots",
+      "expectedAnswer": [1.5, -5],
+      "tolerance": 0.01
+    },
+    {
+      "id": 24,
+      "category": "Arithmetic Progression",
+      "question": "An arithmetic sequence starts at 12 and increases by 4 each term. What is the 15th term?",
+      "expectedTool": "solveArithmeticProgression",
+      "expectedAnswer": { "nthTerm": 68, "sum": 600 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 25,
+      "category": "Geometric Progression",
+      "question": "A geometric sequence has first term 5 and common ratio 2. Find the 8th term.",
+      "expectedTool": "solveGeometricProgression",
+      "expectedAnswer": { "nthTerm": 640, "sum": 1275 },
+      "tolerance": 0.01
+    }
+  ]
+}

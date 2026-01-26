@@ -1,0 +1,204 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "If I plug 5 into y = 3x + 7, what do I get?",
+      "expectedTool": "calculateLinearY",
+      "expectedAnswer": { "y": 22 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 2,
+      "difficulty": "medium",
+      "question": "Something squared minus 5 times itself plus 6 equals zero. What are the solutions?",
+      "expectedTool": "solveQuadraticRoots",
+      "expectedAnswer": { "roots": [3, 2] },
+      "tolerance": 0.01
+    },
+    {
+      "id": 3,
+      "difficulty": "hard",
+      "question": "A parabola is defined by 2x² - 8x + 5. Where does it reach its minimum or maximum point?",
+      "expectedTool": "findQuadraticVertex",
+      "expectedAnswer": { "x": 2, "y": -3 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "I have these numbers: 5, 8, 12, 15, 12, 8, 20. What's the average, middle value, and most common?",
+      "expectedTool": "analyzeDataList",
+      "expectedAnswer": { "mean": 11.43, "median": 12 },
+      "tolerance": 0.1
+    },
+    {
+      "id": 5,
+      "difficulty": "hard",
+      "question": "Data is grouped with midpoints at 15, 25, 35, 45 and counts of 3, 7, 5, 2. Calculate the weighted average.",
+      "expectedTool": "calculateGroupedMean",
+      "expectedAnswer": { "mean": 28.53 },
+      "tolerance": 0.1
+    },
+    {
+      "id": 6,
+      "difficulty": "hard",
+      "question": "In grouped data, the middle class starts at 20, has 15 items, 18 items came before it, total is 50, and each class spans 10 units. Find the middle value.",
+      "expectedTool": "calculateGroupedMedian",
+      "expectedAnswer": { "median": 27.33 },
+      "tolerance": 0.1
+    },
+    {
+      "id": 7,
+      "difficulty": "medium",
+      "question": "The most frequent class starts at 30, is 8 more than the previous and 5 more than the next, with class width 10. Where's the peak?",
+      "expectedTool": "calculateGroupedMode",
+      "expectedAnswer": { "mode": 36.15 },
+      "tolerance": 0.2
+    },
+    {
+      "id": 8,
+      "difficulty": "medium",
+      "question": "Two quantities are proportional. When one is 4, the other is 20. If the first becomes 7, what's the second?",
+      "expectedTool": "calculateDirectVariation",
+      "expectedAnswer": { "k": 5, "y2": 35 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 9,
+      "difficulty": "medium",
+      "question": "Two values have an inverse relationship. At 5 and 12, they balance. If one drops to 3, what happens to the other?",
+      "expectedTool": "calculateInverseVariation",
+      "expectedAnswer": { "k": 60, "y2": 20 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "A sequence starts at 5 and increases by 3 each time. What's the 10th number and the sum of the first 10?",
+      "expectedTool": "solveArithmeticProgression",
+      "expectedAnswer": { "nthTerm": 32, "sum": 185 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 11,
+      "difficulty": "medium",
+      "question": "Each term is triple the previous, starting from 2. Find the 6th term and total of first 6.",
+      "expectedTool": "solveGeometricProgression",
+      "expectedAnswer": { "nthTerm": 486, "sum": 728 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 12,
+      "difficulty": "hard",
+      "question": "I put away 5000 dollars. Each year it grows by 6%. After 3 years, how much do I have and how much did it grow?",
+      "expectedTool": "calculateCompoundInterest",
+      "expectedAnswer": { "amount": 5955.08, "interest": 955.08 },
+      "tolerance": 2
+    },
+    {
+      "id": 13,
+      "difficulty": "hard",
+      "question": "10000 invested, 8% annual rate, 2 years, compounded every 3 months. Final amount?",
+      "expectedTool": "calculateCompoundInterest",
+      "expectedAnswer": { "amount": 11716.59, "interest": 1716.59 },
+      "tolerance": 2
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "A round shape has a distance of 7 from center to edge. How much space inside and distance around?",
+      "expectedTool": "calculateCircleProperties",
+      "expectedAnswer": { "area": 153.94, "circumference": 43.98 },
+      "tolerance": 0.2
+    },
+    {
+      "id": 15,
+      "difficulty": "medium",
+      "question": "A 60-degree slice of a circle with radius 10. What's the curved edge length and slice area?",
+      "expectedTool": "calculateArcSector",
+      "expectedAnswer": { "arcLength": 10.47, "sectorArea": 52.36 },
+      "tolerance": 0.2
+    },
+    {
+      "id": 16,
+      "difficulty": "hard",
+      "question": "In a circle of radius 13, a straight line is drawn 5 units from the center. How long is that line?",
+      "expectedTool": "calculateChordLength",
+      "expectedAnswer": { "chord": 24 },
+      "tolerance": 0.1
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Traveling north-south on Earth from 10°N to 40°N along the same longitude. Distance?",
+      "expectedTool": "calculateGreatCircle",
+      "expectedAnswer": { "distanceKm": 3333.6 },
+      "tolerance": 20
+    },
+    {
+      "id": 18,
+      "difficulty": "hard",
+      "question": "Moving east-west at 30° north latitude, from 20°E to 50°E. How far?",
+      "expectedTool": "calculateSmallCircle",
+      "expectedAnswer": { "distanceKm": 2879.4 },
+      "tolerance": 20
+    },
+    {
+      "id": 19,
+      "difficulty": "hard",
+      "question": "Two points on Earth: (-6.7, 39.2) and (-6.1, 35.7). Shortest distance between them?",
+      "expectedTool": "calculateHaversine",
+      "expectedAnswer": { "distance": 389.5 },
+      "tolerance": 20
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "A company owns things worth 500000 and owes 150000. What's left for the owners?",
+      "expectedTool": "solveAccountingEquation",
+      "expectedAnswer": { "capital": 350000 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Debts are 75000, owner's stake is 125000. Total value of everything owned?",
+      "expectedTool": "solveAccountingEquation",
+      "expectedAnswer": { "assets": 200000 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 22,
+      "difficulty": "easy",
+      "question": "Make a financial statement: owns 800000, owes 300000.",
+      "expectedTool": "generateBalanceSheet",
+      "expectedAnswer": { "assets": 800000, "liabilities": 300000, "capital": 500000 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 23,
+      "difficulty": "hard",
+      "question": "2 times something squared plus 7 times that thing minus 15 is zero. What are the values?",
+      "expectedTool": "solveQuadraticRoots",
+      "expectedAnswer": { "roots": [1.5, -5] },
+      "tolerance": 0.01
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Numbers increase by 4 starting from 12. What's the 15th one and sum of first 15?",
+      "expectedTool": "solveArithmeticProgression",
+      "expectedAnswer": { "nthTerm": 68, "sum": 600 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "Doubling sequence beginning at 5. The 8th term is?",
+      "expectedTool": "solveGeometricProgression",
+      "expectedAnswer": { "nthTerm": 640, "sum": 1275 },
+      "tolerance": 0.01
+    }
+  ]
+}
