@@ -1,0 +1,80 @@
+{
+    "sections": [
+        {
+            "id": "architecture",
+            "title": "Architecture",
+            "icon": "code",
+            "content": [
+                {
+                    "type": "heading",
+                    "text": "Project Structure"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "fml4 -o follows a modular chapter-based architecture using React, Mafs, and Three.js."
+                },
+                {
+                    "type": "code",
+                    "language": "text",
+                    "text": "mathf4-o/\n├── src/\n│   ├── chapters/      # Interactive chapter components\n│   ├── components/    # Reusable UI elements\n│   ├── lib/\n│   │   ├── math.js    # JS implementation of FML formulas\n│   │   ├── aiTools.js # AI tool definitions (JSON Schema)\n│   │   └── aiAssist.js # Logic for the AI Assistant\n│   └── data/          # Documentation and static data"
+                },
+                {
+                    "type": "heading",
+                    "text": "Key Components"
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "Mafs: Used for all 2D coordinate-based visualizations (Ch 1, 5, 6, 7, 8).",
+                        "Three.js: Used for high-performance 3D rendering of solids (Ch 3).",
+                        "KaTeX: Used for rendering mathematical notation across all views."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fml-framework",
+            "title": "FML Framework",
+            "icon": "package",
+            "content": [
+                {
+                    "type": "heading",
+                    "text": "Formula Implementation"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The core logic is derived from the FML (Formula Math Library) Python reference. These formulas were ported to pathf4-o/src/lib/math.js for zero-latency browser execution."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Formula Pattern:"
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "text": "export const cylinderStats = (radius, height) => {\n  const volume = Math.PI * radius * radius * height;\n  const surfaceArea = 2 * Math.PI * radius * (radius + height);\n  return { volume, surfaceArea };\n};"
+                }
+            ]
+        },
+        {
+            "id": "ai-integration",
+            "title": "AI Tools",
+            "icon": "brain",
+            "content": [
+                {
+                    "type": "heading",
+                    "text": "Tool Selection Logic"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The AI Assistant uses function calling to bridge natural language and mathematics. The tools are defined in aiTools.js using JSON Schema."
+                },
+                {
+                    "type": "code",
+                    "language": "javascript",
+                    "text": "{\n  name: 'vectorMagnitude',\n  parameters: {\n    type: 'object',\n    properties: {\n      x: { type: 'number' },\n      y: { type: 'number' }\n    }\n  }\n}"
+                }
+            ]
+        }
+    ]
+}

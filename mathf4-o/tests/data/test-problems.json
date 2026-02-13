@@ -1,0 +1,64 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "category": "Coordinate Geometry",
+      "question": "Find the gradient of the line passing through points (2, 3) and (5, 9)",
+      "expectedTool": "calculateGradient"
+    },
+    {
+      "id": 2,
+      "category": "Coordinate Geometry",
+      "question": "Calculate the distance between points (-1, 4) and (3, 1)",
+      "expectedTool": "calculateDistance"
+    },
+    {
+      "id": 3,
+      "category": "Areas",
+      "question": "Find the area of a triangle with sides 7 and 8, and angle 60 degrees between them",
+      "expectedTool": "triangleAreaSAS"
+    },
+    {
+      "id": 4,
+      "category": "3D Figures",
+      "question": "Calculate the volume of a cylinder with radius 5 cm and height 10 cm",
+      "expectedTool": "cylinderStats"
+    },
+    {
+      "id": 5,
+      "category": "Probability",
+      "question": "What is the probability of rolling a 6 on a fair die?",
+      "expectedTool": "probabilityEvent"
+    },
+    {
+      "id": 6,
+      "category": "Trigonometry",
+      "question": "Use sine rule: angle A is 30 degrees, side a is 5, angle B is 45 degrees. Find side b",
+      "expectedTool": "sineRule"
+    },
+    {
+      "id": 7,
+      "category": "Vectors",
+      "question": "Add vectors (3, 4) and (1, 2)",
+      "expectedTool": "addVectors"
+    },
+    {
+      "id": 8,
+      "category": "Matrices",
+      "question": "Find the determinant of matrix [[2, 3], [1, 4]]",
+      "expectedTool": "matrixDeterminant"
+    },
+    {
+      "id": 9,
+      "category": "Matrices",
+      "question": "Solve the system: 2x + 3y = 7 and x + 2y = 4",
+      "expectedTool": "solveSimultaneousEq"
+    },
+    {
+      "id": 10,
+      "category": "Linear Programming",
+      "question": "Evaluate P = 3x + 4y at point (2, 5)",
+      "expectedTool": "evaluateObjectiveFunction"
+    }
+  ]
+}

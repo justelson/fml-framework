@@ -1,0 +1,145 @@
+{
+    "sections": [
+        {
+            "id": "getting-started",
+            "title": "Getting Started",
+            "icon": "rocket",
+            "content": [
+                {
+                    "type": "heading",
+                    "text": "Welcome to fml4 -o"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "fml4 -o (Formula Math Library - Form 4 Old Syllabus) is an interactive mathematics learning platform designed for Form 4 students. It combines precise calculations with AI-powered explanations to help you understand the entire Form 4 curriculum."
+                },
+                {
+                    "type": "callout",
+                    "variant": "info",
+                    "text": "Every calculation comes with two views: 'Steps' for formal derivation and 'Lazyplain' for simple conceptual understanding."
+                },
+                {
+                    "type": "heading",
+                    "text": "Quick Start"
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "Choose a chapter from the sidebar",
+                        "Enter your values in the input fields",
+                        "Click the solve/calculate button to see results",
+                        "Toggle between 'Steps' and 'Lazyplain' to understand the logic",
+                        "Try the AI Assist for natural language questions"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "chapters",
+            "title": "Chapters Overview",
+            "icon": "book",
+            "content": [
+                {
+                    "type": "heading",
+                    "text": "Available Chapters"
+                },
+                {
+                    "type": "chapter",
+                    "title": "Ch 1: Coordinate Geometry",
+                    "description": "Gradients, distance, midpoint, and line equations. Master the relationships between points and lines."
+                },
+                {
+                    "type": "chapter",
+                    "title": "Ch 2: Areas & Perimeters",
+                    "description": "Calculate areas for triangles, quadrilaterals, polygons, and circles. Includes Heron's formula and similar shape scaling."
+                },
+                {
+                    "type": "chapter",
+                    "title": "Ch 3: 3-Dimensional Figures",
+                    "description": "Interactive 3D visualizations of cylinders, cones, and spheres. Calculate surface areas and volumes."
+                },
+                {
+                    "type": "chapter",
+                    "title": "Ch 4: Probability",
+                    "description": "Understand events, mutually exclusive vs independent events, and combined probability with visual meters."
+                },
+                {
+                    "type": "chapter",
+                    "title": "Ch 5: Trigonometry",
+                    "description": "Master the Sine and Cosine rules. Solve complex triangle problems with dynamic Mafs visualizations."
+                },
+                {
+                    "type": "chapter",
+                    "title": "Ch 6: Vectors",
+                    "description": "Learn magnitude, direction, and vector operations. Visual tip-to-tail addition."
+                },
+                {
+                    "type": "chapter",
+                    "title": "Ch 7: Matrices",
+                    "description": "Determinants, inverses, and solving simultaneous equations using Cramer's Rule. Includes geometric transformations."
+                },
+                {
+                    "type": "chapter",
+                    "title": "Ch 8: Linear Programming",
+                    "description": "Visualize inequality regions and optimize objective functions for real-world constraints."
+                }
+            ]
+        },
+        {
+            "id": "ai-assist",
+            "title": "Using AI Assist",
+            "icon": "brain",
+            "content": [
+                {
+                    "type": "heading",
+                    "text": "AI-Powered Math Help"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The AI Assist feature allows you to ask math questions in natural language. It identifies the correct formula and provides a detailed breakdown."
+                },
+                {
+                    "type": "heading",
+                    "text": "Setup Required"
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "Go to Settings tab",
+                        "Enter your Groq API key",
+                        "Click 'Save Key'",
+                        "Return to AI Assist tab"
+                    ]
+                },
+                {
+                    "type": "heading",
+                    "text": "How to Ask Questions"
+                },
+                {
+                    "type": "callout",
+                    "variant": "tip",
+                    "text": "Ask questions like: 'What is the volume of a cone with radius 3 and height 5?' or 'Solve 2x+y=10 and x+y=7'."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The AI is specifically trained on all 45+ tools in this library."
+                }
+            ]
+        },
+        {
+            "id": "privacy",
+            "title": "Privacy",
+            "icon": "shield",
+            "content": [
+                {
+                    "type": "heading",
+                    "text": "Privacy & Data"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All calculations are performed locally in your browser. Your API key is stored in your private localStorage and is only sent to Groq's official API."
+                }
+            ]
+        }
+    ]
+}

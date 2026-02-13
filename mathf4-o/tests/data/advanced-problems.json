@@ -1,0 +1,84 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What's the gradient of a line through (2, 3) and (5, 9)?",
+      "expectedTool": "calculateGradient",
+      "expectedAnswer": { "gradient": 2 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "How far apart are points (-1, 4) and (3, 1)?",
+      "expectedTool": "calculateDistance",
+      "expectedAnswer": { "distance": 5 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 3,
+      "difficulty": "medium",
+      "question": "A triangle has sides 7 and 8 with a 60-degree angle between them. What's its area?",
+      "expectedTool": "triangleAreaSAS",
+      "expectedAnswer": { "area": 24.248711305964285 },
+      "tolerance": 0.1
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Find the volume of a cylinder: radius 5, height 10",
+      "expectedTool": "cylinderStats",
+      "expectedAnswer": { "volume": 785.3981633974483 },
+      "tolerance": 1
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "If I roll a fair die, what's the probability of getting a 6?",
+      "expectedTool": "probabilityEvent",
+      "expectedAnswer": { "probability": 0.16666666666666666 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 6,
+      "difficulty": "medium",
+      "question": "In a triangle, angle A is 30°, side a is 5, angle B is 45°. Use sine rule to find side b.",
+      "expectedTool": "sineRule",
+      "expectedAnswer": { "sideB": 7.071 },
+      "tolerance": 0.1
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Add vector (3, 4) to vector (1, 2)",
+      "expectedTool": "addVectors",
+      "expectedAnswer": { "x": 4, "y": 6 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What's the determinant of [[2, 3], [1, 4]]?",
+      "expectedTool": "matrixDeterminant",
+      "expectedAnswer": { "determinant": 5 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 9,
+      "difficulty": "medium",
+      "question": "Solve this system: 2x + 3y = 7 and x + 2y = 4",
+      "expectedTool": "solveSimultaneousEq",
+      "expectedAnswer": { "x": 2, "y": 1 },
+      "tolerance": 0.01
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "If P = 3x + 4y, what's P at point (2, 5)?",
+      "expectedTool": "evaluateObjectiveFunction",
+      "expectedAnswer": { "value": 26 },
+      "tolerance": 0.01
+    }
+  ]
+}

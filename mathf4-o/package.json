@@ -1,0 +1,37 @@
+{
+  "name": "fml4-o",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Form 4 Basic Mathematics - Old Syllabus (Interactive Learning App)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:simple": "node tests/simple-test.js",
+    "test:simple:quick": "node tests/simple-test.js --limit=5",
+    "test:advanced": "node tests/advanced-test.js",
+    "test:advanced:quick": "node tests/advanced-test.js --limit=5",
+    "test:advanced:random": "node tests/advanced-test.js --random --limit=10"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.1",
+    "dotenv": "^16.4.5",
+    "groq-sdk": "^0.8.0",
+    "katex": "^0.16.10",
+    "lucide-react": "^0.563.0",
+    "mafs": "^0.19.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-katex": "^3.0.1",
+    "react-router-dom": "^7.13.0",
+    "recharts": "^2.15.0",
+    "three": "^0.171.0",
+    "@react-three/fiber": "^8.0.0",
+    "@react-three/drei": "^9.122.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.10"
+  }
+}
