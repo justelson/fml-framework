@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FML Framework | User Documentation Dashboard</title>
+    <meta
+      name="description"
+      content="In-depth user documentation dashboard for students and teachers using FML math apps."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="content-page docs-page">
+    <div class="grid-layer" aria-hidden="true"></div>
+    <div class="glow glow-left" aria-hidden="true"></div>
+    <div class="glow glow-right" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="/index.html" aria-label="FML Home">FML HUB</a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a data-nav="index.html" href="/index.html">Home</a>
+        <a data-nav="project.html" href="/project.html">Project</a>
+        <a data-nav="curriculum.html" href="/curriculum.html">Curriculum</a>
+        <a data-nav="deployment.html" href="/deployment.html">Deployment</a>
+        <a data-nav="docs.html" href="/docs.html">Docs</a>
+        <a href="https://github.com/justelson/fml-framework" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <button data-theme-toggle class="theme-toggle" type="button" aria-pressed="false">
+        Theme: Dark
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <p class="eyebrow">User Dashboard</p>
+        <h1>In-depth guide for students and teachers</h1>
+        <p>
+          Use this dashboard to understand how to study with FML apps effectively, how to verify AI-assisted
+          answers, and how to prepare for syllabus-aligned assessments.
+        </p>
+      </section>
+
+      <section class="docs-shell">
+        <aside class="docs-sidebar">
+          <p class="panel-label">User sections</p>
+          <nav class="docs-nav" aria-label="User documentation sections">
+            <a href="#start">Start here</a>
+            <a href="#daily">Daily study workflow</a>
+            <a href="#ai">AI assist workflow</a>
+            <a href="#revision">Revision strategy</a>
+            <a href="#teacher">Teacher classroom usage</a>
+            <a href="#troubleshooting">Troubleshooting</a>
+          </nav>
+          <div class="docs-links">
+            <a class="mini-cta" href="/3o/">Open Form 3 app</a>
+            <a class="mini-cta" href="/4o/">Open Form 4 app</a>
+            <a class="mini-cta" href="/docs.html">Back to docs hub</a>
+          </div>
+        </aside>
+
+        <div class="docs-content">
+          <section class="doc-section accent-a" id="start">
+            <h2>Start here</h2>
+            <div class="doc-kpi-grid">
+              <article class="doc-kpi">
+                <h3>1</h3>
+                <p>Choose route: <code>/3o/</code> or <code>/4o/</code></p>
+              </article>
+              <article class="doc-kpi">
+                <h3>2</h3>
+                <p>Select chapter matching your lesson or revision topic</p>
+              </article>
+              <article class="doc-kpi">
+                <h3>3</h3>
+                <p>Run formula tool and validate result with worked logic</p>
+              </article>
+            </div>
+            <p>
+              Learner success depends on using the output as an explanation tool, not only as an answer tool.
+              Every session should end with a short self-check on formula selection and unit consistency.
+            </p>
+          </section>
+
+          <section class="doc-section accent-b" id="daily">
+            <h2>Daily study workflow</h2>
+            <ol>
+              <li>Pick one topic objective for the session.</li>
+              <li>Open the matching chapter and solve one basic example manually first.</li>
+              <li>Use the chapter tool to compute the same problem and compare steps.</li>
+              <li>Solve two variations by changing values and noting output behavior.</li>
+              <li>Write one summary line: formula used, why it fits, and common mistake risk.</li>
+            </ol>
+            <p>
+              Recommended session duration: 25-40 minutes focused per topic block, then a short break.
+            </p>
+          </section>
+
+          <section class="doc-section accent-c" id="ai">
+            <h2>AI assist workflow</h2>
+            <ul>
+              <li>Ask concise prompts with known values and expected unknown variable.</li>
+              <li>Check that AI-selected tool matches chapter context.</li>
+              <li>Confirm units and domain restrictions before trusting final value.</li>
+              <li>For exam prep, rewrite the final process in your own words.</li>
+            </ul>
+            <p>
+              Example prompt pattern:
+              <code>Solve [topic] where [given values], find [unknown], explain steps.</code>
+            </p>
+          </section>
+
+          <section class="doc-section accent-a" id="revision">
+            <h2>Revision strategy</h2>
+            <div class="doc-columns">
+              <article class="doc-panel">
+                <h3>Week structure</h3>
+                <ul>
+                  <li>Mon-Tue: concept build</li>
+                  <li>Wed-Thu: mixed practice</li>
+                  <li>Fri: timed drill + correction</li>
+                  <li>Weekend: weak-area reinforcement</li>
+                </ul>
+              </article>
+              <article class="doc-panel">
+                <h3>Error log categories</h3>
+                <ul>
+                  <li>Formula selection error</li>
+                  <li>Substitution/calculation error</li>
+                  <li>Graph/interpretation error</li>
+                  <li>Unit/sign conversion error</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="doc-section accent-b" id="teacher">
+            <h2>Teacher classroom usage</h2>
+            <ul>
+              <li>Use chapter pages for live worked examples and quick class checks.</li>
+              <li>Assign AI assist comparisons as homework reflection tasks.</li>
+              <li>Use model outputs to discuss method differences, not only final answers.</li>
+              <li>Map local syllabus objectives to chapter tools for lesson planning.</li>
+            </ul>
+          </section>
+
+          <section class="doc-section accent-c" id="troubleshooting">
+            <h2>Troubleshooting</h2>
+            <div class="doc-table">
+              <div class="doc-table-row doc-table-head">
+                <p>Issue</p>
+                <p>Likely cause</p>
+                <p>Action</p>
+              </div>
+              <div class="doc-table-row">
+                <p>No AI response</p>
+                <p>Missing API key or service limit</p>
+                <p>Retry later and confirm deployment key settings</p>
+              </div>
+              <div class="doc-table-row">
+                <p>Wrong answer shape</p>
+                <p>Topic mismatch or malformed prompt</p>
+                <p>Specify chapter context and all known values</p>
+              </div>
+              <div class="doc-table-row">
+                <p>Graph not loading</p>
+                <p>Browser script restriction</p>
+                <p>Refresh page and disable strict content blocking</p>
+              </div>
+            </div>
+            <p>
+              More written detail is also available in:
+              <a class="inline-link" href="https://github.com/justelson/fml-framework/tree/main/docs/user" target="_blank" rel="noreferrer">docs/user on GitHub</a>.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>FML Framework | User Documentation Dashboard</p>
+      <p><a href="/docs.html">Back to docs hub</a></p>
+    </footer>
+
+    <script src="/theme.js"></script>
+  </body>
+</html>

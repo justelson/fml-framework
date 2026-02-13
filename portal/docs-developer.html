@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FML Framework | Developer Documentation Dashboard</title>
+    <meta
+      name="description"
+      content="In-depth developer dashboard for FML framework architecture, implementation, testing, and deployment."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="content-page docs-page">
+    <div class="grid-layer" aria-hidden="true"></div>
+    <div class="glow glow-left" aria-hidden="true"></div>
+    <div class="glow glow-right" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="/index.html" aria-label="FML Home">FML HUB</a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a data-nav="index.html" href="/index.html">Home</a>
+        <a data-nav="project.html" href="/project.html">Project</a>
+        <a data-nav="curriculum.html" href="/curriculum.html">Curriculum</a>
+        <a data-nav="deployment.html" href="/deployment.html">Deployment</a>
+        <a data-nav="docs.html" href="/docs.html">Docs</a>
+        <a href="https://github.com/justelson/fml-framework" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <button data-theme-toggle class="theme-toggle" type="button" aria-pressed="false">
+        Theme: Dark
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <p class="eyebrow">Developer Dashboard</p>
+        <h1>In-depth engineering and operations guide</h1>
+        <p>
+          Use this dashboard for setup, architecture decisions, chapter extensions, test strategy,
+          branch release flow, and deployment hardening.
+        </p>
+      </section>
+
+      <section class="docs-shell">
+        <aside class="docs-sidebar">
+          <p class="panel-label">Developer sections</p>
+          <nav class="docs-nav" aria-label="Developer documentation sections">
+            <a href="#setup">Local setup</a>
+            <a href="#topology">Repository topology</a>
+            <a href="#architecture">Architecture layers</a>
+            <a href="#extension">Add a chapter or tool</a>
+            <a href="#testing">Testing strategy</a>
+            <a href="#release">Release flow</a>
+            <a href="#security">Security and keys</a>
+          </nav>
+          <div class="docs-links">
+            <a class="mini-cta" href="/docs.html">Back to docs hub</a>
+            <a class="mini-cta" href="https://github.com/justelson/fml-framework/tree/main/fml-framework" target="_blank" rel="noreferrer">Framework core on GitHub</a>
+            <a class="mini-cta" href="https://github.com/justelson/fml-framework/tree/main/docs/developer" target="_blank" rel="noreferrer">Developer markdown docs</a>
+          </div>
+        </aside>
+
+        <div class="docs-content">
+          <section class="doc-section accent-a" id="setup">
+            <h2>Local setup</h2>
+            <ol>
+              <li>Clone repository and enter project root.</li>
+              <li>Install dependencies in root and app folders as needed.</li>
+              <li>Create local env values without committing secrets.</li>
+              <li>Run app dev servers and verify route-level startup.</li>
+            </ol>
+            <div class="doc-columns">
+              <article class="doc-panel">
+                <h3>Build and test commands</h3>
+                <ul>
+                  <li><code>npm run build</code> from root builds both apps + portal assembly.</li>
+                  <li><code>cd mathf3-o && npm run dev</code> for Form 3 local loop.</li>
+                  <li><code>cd mathf4-o && npm run dev</code> for Form 4 local loop.</li>
+                  <li><code>cd mathf4-o && npm run test</code> for tool checks where available.</li>
+                </ul>
+              </article>
+              <article class="doc-panel">
+                <h3>Environment requirements</h3>
+                <ul>
+                  <li>Node.js LTS runtime</li>
+                  <li><code>VITE_GROQ_API_KEY</code> configured in local/deploy environments</li>
+                  <li>Modern browser for chart and 3D rendering support</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="doc-section accent-b" id="topology">
+            <h2>Repository topology</h2>
+            <div class="doc-table">
+              <div class="doc-table-row doc-table-head">
+                <p>Path</p>
+                <p>Role</p>
+                <p>Primary contents</p>
+              </div>
+              <div class="doc-table-row">
+                <p><code>fml-framework/</code></p>
+                <p>Reusable framework layer</p>
+                <p>Formula modules, templates, references</p>
+              </div>
+              <div class="doc-table-row">
+                <p><code>mathf3-o/</code></p>
+                <p>Form 3 app</p>
+                <p>Chapters, AI tools, learning UI</p>
+              </div>
+              <div class="doc-table-row">
+                <p><code>mathf4-o/</code></p>
+                <p>Form 4 app</p>
+                <p>Advanced chapters, visualization tooling</p>
+              </div>
+              <div class="doc-table-row">
+                <p><code>portal/</code></p>
+                <p>Unified site shell</p>
+                <p>Main pages, docs dashboards, theme system</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="doc-section accent-c" id="architecture">
+            <h2>Architecture layers</h2>
+            <ul>
+              <li><strong>Formula layer:</strong> deterministic math functions and helpers.</li>
+              <li><strong>Tool schema layer:</strong> structured AI-callable definitions in <code>aiTools.js</code>.</li>
+              <li><strong>Dispatcher layer:</strong> maps tool calls to implementations in <code>toolDispatcher.js</code>.</li>
+              <li><strong>Chapter UX layer:</strong> lesson components, forms, graphing, and feedback UI.</li>
+              <li><strong>Portal layer:</strong> launch routes, docs, and deployment communication.</li>
+            </ul>
+            <p>
+              Core design goal: AI augmentation with deterministic solver guarantees for accuracy and auditability.
+            </p>
+          </section>
+
+          <section class="doc-section accent-a" id="extension">
+            <h2>Add a chapter or tool</h2>
+            <ol>
+              <li>Create or update formula functions in chapter math utilities.</li>
+              <li>Add or revise tool schema entries in <code>aiTools.js</code>.</li>
+              <li>Map schema handlers in <code>toolDispatcher.js</code>.</li>
+              <li>Implement chapter page UI and wire execution responses.</li>
+              <li>Add tests and sample prompts to validate both normal and edge-case behavior.</li>
+            </ol>
+          </section>
+
+          <section class="doc-section accent-b" id="testing">
+            <h2>Testing strategy</h2>
+            <div class="doc-columns">
+              <article class="doc-panel">
+                <h3>Functional checks</h3>
+                <ul>
+                  <li>Formula output correctness for known datasets.</li>
+                  <li>Input validation for invalid or incomplete values.</li>
+                  <li>AI-to-tool mapping against expected solver path.</li>
+                </ul>
+              </article>
+              <article class="doc-panel">
+                <h3>Release checks</h3>
+                <ul>
+                  <li>Full root build with deploy assembly.</li>
+                  <li>Manual route checks for <code>/3o/</code> and <code>/4o/</code>.</li>
+                  <li>Portal docs pages render in light and dark themes.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="doc-section accent-c" id="release">
+            <h2>Release flow and branch policy</h2>
+            <ol>
+              <li>Feature work lands in <code>main</code> after review and validation.</li>
+              <li>Approved deployment set is synchronized to <code>official-deployment</code>.</li>
+              <li>Vercel production branch tracks <code>official-deployment</code> for controlled releases.</li>
+              <li>Optional scoped branch <code>no-deployment-files</code> can be used for source-only sharing.</li>
+            </ol>
+          </section>
+
+          <section class="doc-section accent-a" id="security">
+            <h2>Security and key handling</h2>
+            <ul>
+              <li>No private keys in git-tracked files, commits, or screenshots.</li>
+              <li>Use provider environment variables for runtime secrets.</li>
+              <li>Rotate keys immediately if accidental exposure is suspected.</li>
+              <li>Run repository scans before release branches are pushed.</li>
+            </ul>
+            <p>
+              Deep operational details are documented in:
+              <a class="inline-link" href="https://github.com/justelson/fml-framework/tree/main/docs/developer" target="_blank" rel="noreferrer">docs/developer on GitHub</a>.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>FML Framework | Developer Documentation Dashboard</p>
+      <p><a href="/docs.html">Back to docs hub</a></p>
+    </footer>
+
+    <script src="/theme.js"></script>
+  </body>
+</html>

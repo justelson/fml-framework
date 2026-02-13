@@ -1,16 +1,30 @@
 # Root Documentation Index
 
-This folder contains repository-level documentation that was moved out of the root for cleaner project organization.
+This folder contains repository-level documentation for users, developers, project structure, and deployment policy.
 
-## Folders
+## Documentation tree
 
-- `docs/project/`
-  - `CLEANUP-GUIDE.md`
-  - `PROJECT-STRUCTURE.md`
-- `docs/deployment/`
-  - `DEPLOYMENT_POLICY.md`
+### User documentation
 
-## Notes
+- `docs/user/USER-DOCUMENTATION.md`
+- `docs/user/LEARNING-WORKFLOWS.md`
+- `docs/user/TROUBLESHOOTING.md`
 
-- Keep `README.md` in the repository root as the primary entry point.
-- Add any new repository-wide `.md` docs under `docs/` instead of the root.
+### Developer documentation
+
+- `docs/developer/DEVELOPER-DOCUMENTATION.md`
+- `docs/developer/ARCHITECTURE-DEEP-DIVE.md`
+- `docs/developer/OPERATIONS-RUNBOOK.md`
+
+### Existing project and deployment references
+
+- `docs/project/CLEANUP-GUIDE.md`
+- `docs/project/PROJECT-STRUCTURE.md`
+- `docs/deployment/DEPLOYMENT_POLICY.md`
+
+## Documentation standards
+
+- Keep root `README.md` focused on project overview and quick start.
+- Put long-form deep documentation in `docs/` under audience-specific folders.
+- Keep command examples copy-paste ready.
+- Do not place private keys, secrets, or sensitive tokens in markdown examples.

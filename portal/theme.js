@@ -16,7 +16,14 @@
     const path = window.location.pathname;
     if (!path || path === "/") return "index.html";
     const name = path.split("/").pop();
-    return name && name.trim() ? name : "index.html";
+    if (!name || !name.trim()) return "index.html";
+
+    // Keep top-nav highlighting on the Docs item for nested docs dashboards.
+    if (name === "docs-user.html" || name === "docs-developer.html") {
+      return "docs.html";
+    }
+
+    return name;
   }
 
   function highlightActiveNav() {

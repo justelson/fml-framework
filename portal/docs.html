@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FML Framework | Documentation</title>
+    <title>FML Framework | Documentation Hub</title>
     <meta
       name="description"
-      content="User and developer documentation for the FML Framework portal and math learning apps."
+      content="FML documentation hub with separate in-depth dashboards for users and developers."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,151 +38,116 @@
 
     <main class="page-main">
       <section class="page-hero">
-        <p class="eyebrow">Documentation</p>
-        <h1>User + developer docs in one place</h1>
+        <p class="eyebrow">Documentation Hub</p>
+        <h1>Choose your documentation dashboard</h1>
         <p>
-          This page is the primary docs hub for students, teachers, and maintainers. It covers
-          practical usage, setup, architecture, deployment flow, and security policy.
+          This docs hub is split by audience. Use the User Dashboard for learning and classroom usage,
+          and the Developer Dashboard for architecture, implementation, and operations.
         </p>
       </section>
 
       <section class="docs-shell">
         <aside class="docs-sidebar">
-          <p class="panel-label">On this page</p>
-          <nav class="docs-nav" aria-label="Documentation sections">
-            <a href="#quickstart">Quick Start</a>
-            <a href="#user-docs">User Guide</a>
-            <a href="#developer-docs">Developer Guide</a>
-            <a href="#architecture">Architecture</a>
-            <a href="#deployment">Deployment</a>
-            <a href="#security">Security</a>
+          <p class="panel-label">Hub navigation</p>
+          <nav class="docs-nav" aria-label="Documentation hub sections">
+            <a href="#dashboards">Dashboard Routes</a>
+            <a href="#root-docs">Root Markdown Docs</a>
+            <a href="#standards">Documentation Standards</a>
+            <a href="#references">References</a>
           </nav>
           <div class="docs-links">
-            <a class="mini-cta" href="/3o/">Open Form 3 App</a>
-            <a class="mini-cta" href="/4o/">Open Form 4 App</a>
-            <a
-              class="mini-cta"
-              href="https://github.com/justelson/fml-framework/tree/main/docs"
-              target="_blank"
-              rel="noreferrer"
-              >View `/docs` on GitHub</a
-            >
+            <a class="mini-cta" href="/docs-user.html">Open user dashboard</a>
+            <a class="mini-cta" href="/docs-developer.html">Open developer dashboard</a>
+            <a class="mini-cta" href="https://github.com/justelson/fml-framework/tree/main/fml-framework" target="_blank" rel="noreferrer">View framework core on GitHub</a>
           </div>
         </aside>
 
         <div class="docs-content">
-          <section class="doc-section accent-a" id="quickstart">
-            <h2>Quick Start</h2>
-            <div class="doc-columns">
-              <article class="doc-panel">
-                <h3>For users</h3>
-                <ol>
-                  <li>Open the portal home.</li>
-                  <li>Select <code>/3o/</code> or <code>/4o/</code> based on level.</li>
-                  <li>Choose a chapter and run formula tools from the lesson page.</li>
-                  <li>Use the AI assist page for guided, step-by-step solving.</li>
-                </ol>
+          <section class="doc-section accent-a" id="dashboards">
+            <h2>Dashboard Routes</h2>
+            <div class="docs-hub-grid">
+              <article class="doc-panel docs-hub-card accent-a">
+                <p class="card-kicker">Audience: students and teachers</p>
+                <h3>User Documentation Dashboard</h3>
+                <p>
+                  Covers onboarding, learning flow, chapter usage, AI assist workflow, revision strategy,
+                  and troubleshooting for day-to-day learning.
+                </p>
+                <a class="mini-cta" href="/docs-user.html">Go to user dashboard</a>
               </article>
-              <article class="doc-panel">
-                <h3>For developers</h3>
-                <ol>
-                  <li>Clone repo and run <code>npm install</code> in root.</li>
-                  <li>Run local apps: <code>cd mathf3-o && npm run dev</code>.</li>
-                  <li>Run local apps: <code>cd mathf4-o && npm run dev</code>.</li>
-                  <li>Run release build from root: <code>npm run build</code>.</li>
-                </ol>
+              <article class="doc-panel docs-hub-card accent-b">
+                <p class="card-kicker">Audience: maintainers and contributors</p>
+                <h3>Developer Documentation Dashboard</h3>
+                <p>
+                  Covers repository architecture, local setup, tool integration, testing, deployment policy,
+                  and secure key handling for production.
+                </p>
+                <a class="mini-cta" href="/docs-developer.html">Go to developer dashboard</a>
               </article>
             </div>
           </section>
 
-          <section class="doc-section accent-b" id="user-docs">
-            <h2>User Guide</h2>
+          <section class="doc-section accent-b" id="root-docs">
+            <h2>Root Markdown Docs</h2>
             <p>
-              FML is designed for syllabus-based math study with direct formula execution. Every chapter
-              combines concept notes, calculators, and worked outputs so learners can verify steps quickly.
-            </p>
-            <ul>
-              <li><strong>Chapter workflow:</strong> pick topic, enter values, read interpreted results.</li>
-              <li><strong>AI workflow:</strong> ask in plain language, then cross-check formula output.</li>
-              <li><strong>Curriculum scope:</strong> TZ old syllabus baseline, adaptable to other systems.</li>
-              <li><strong>Best practice:</strong> use the app as a verification and understanding tool.</li>
-            </ul>
-          </section>
-
-          <section class="doc-section accent-c" id="developer-docs">
-            <h2>Developer Guide</h2>
-            <p>
-              The repository uses a shared framework plus two production apps. Add new chapters by
-              implementing formulas, wiring tools, and connecting chapter UI components.
+              Deep-dive docs now live in root <code>docs/</code> so the repo has a stable written reference
+              alongside the dashboard pages.
             </p>
             <div class="doc-columns">
               <article class="doc-panel">
-                <h3>Key paths</h3>
+                <h3>User docs in root</h3>
                 <ul>
-                  <li><code>fml-framework/</code> shared formulas/templates</li>
-                  <li><code>mathf3-o/src/chapters</code> Form 3 pages</li>
-                  <li><code>mathf4-o/src/chapters</code> Form 4 pages</li>
-                  <li><code>portal/</code> deployment landing pages</li>
-                  <li><code>scripts/build-vercel.mjs</code> release build assembler</li>
+                  <li><code>docs/user/USER-DOCUMENTATION.md</code></li>
+                  <li><code>docs/user/LEARNING-WORKFLOWS.md</code></li>
+                  <li><code>docs/user/TROUBLESHOOTING.md</code></li>
                 </ul>
               </article>
               <article class="doc-panel">
-                <h3>Common commands</h3>
+                <h3>Developer docs in root</h3>
                 <ul>
-                  <li><code>npm run build</code> - build both apps + portal into <code>deploy/</code></li>
-                  <li><code>npm run dev</code> - run portal dev workflow (if configured)</li>
-                  <li><code>npm run test</code> - execute app test commands (per app scope)</li>
+                  <li><code>docs/developer/DEVELOPER-DOCUMENTATION.md</code></li>
+                  <li><code>docs/developer/ARCHITECTURE-DEEP-DIVE.md</code></li>
+                  <li><code>docs/developer/OPERATIONS-RUNBOOK.md</code></li>
                 </ul>
               </article>
             </div>
           </section>
 
-          <section class="doc-section accent-a" id="architecture">
-            <h2>Architecture</h2>
-            <p>
-              The system is formula-first. Solvers stay deterministic, while AI prompting is routed through
-              tool schemas and dispatchers. This keeps outputs reproducible and easier to audit.
-            </p>
+          <section class="doc-section accent-c" id="standards">
+            <h2>Documentation Standards</h2>
             <ul>
-              <li><strong>Formula layer:</strong> pure math logic and helper functions.</li>
-              <li><strong>Tool layer:</strong> AI-callable schemas mapped to solver functions.</li>
-              <li><strong>UI layer:</strong> chapter pages for input, explanation, and visualization.</li>
-              <li><strong>Portal layer:</strong> route launcher, docs, and deployment metadata.</li>
+              <li>Audience-first structure with separate user and developer tracks.</li>
+              <li>Stable command examples and path references for reproducible setup.</li>
+              <li>Security-first guidance with no private keys committed to source control.</li>
+              <li>Branch-aware release notes matching <code>main</code> and <code>official-deployment</code>.</li>
             </ul>
           </section>
 
-          <section class="doc-section accent-c" id="deployment">
-            <h2>Deployment</h2>
-            <ol>
-              <li>Approve changes on <code>main</code>.</li>
-              <li>Sync approved release commit(s) to <code>official-deployment</code>.</li>
-              <li>Set Vercel production branch to <code>official-deployment</code>.</li>
-              <li>Deploy <code>deploy/</code> output with routes <code>/3o/</code> and <code>/4o/</code>.</li>
-            </ol>
-            <p>
-              Primary reference: <a class="inline-link" href="/deployment.html">deployment page</a>.
-            </p>
-          </section>
-
-          <section class="doc-section accent-b" id="security">
-            <h2>Security and key handling</h2>
-            <p>
-              Private keys must not be committed. API credentials should be provided through deployment
-              environment variables only.
-            </p>
-            <ul>
-              <li>Store keys in Vercel project environment settings.</li>
-              <li>Never hardcode tokens in source files.</li>
-              <li>Use pre-release checks before pushing deployment branches.</li>
-              <li>Rotate keys immediately if exposure is suspected.</li>
-            </ul>
+          <section class="doc-section accent-a" id="references">
+            <h2>References</h2>
+            <div class="doc-columns">
+              <article class="doc-panel">
+                <h3>Repository docs folder</h3>
+                <p>
+                  Full docs tree in repository root:
+                  <a class="inline-link" href="https://github.com/justelson/fml-framework/tree/main/docs" target="_blank" rel="noreferrer">github.com/justelson/fml-framework/tree/main/docs</a>
+                </p>
+              </article>
+              <article class="doc-panel">
+                <h3>Framework core folder</h3>
+                <p>
+                  Framework source reference:
+                  <a class="inline-link" href="https://github.com/justelson/fml-framework/tree/main/fml-framework" target="_blank" rel="noreferrer">github.com/justelson/fml-framework/tree/main/fml-framework</a>
+                </p>
+              </article>
+            </div>
           </section>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>FML Framework | Docs Page</p>
+      <p>FML Framework | Documentation Hub</p>
       <p><a href="/index.html">Back to home</a></p>
     </footer>
 
