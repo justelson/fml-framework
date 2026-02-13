@@ -33,7 +33,7 @@ touching_grass/
     ├── .gitignore                  # Git ignore rules
     ├── requirements.txt            # Python dependencies
     ├── README.md                   # Main project README
-    └── PROJECT-STRUCTURE.md        # This file
+    └── docs/project/PROJECT-STRUCTURE.md        # This file
 │
 └── 🗑️ Legacy (empty, can be deleted)
     ├── math-play/                  # (Python files moved)
@@ -56,8 +56,8 @@ touching_grass/
 - **Documentation**: 1 file
 
 ### Documentation
-- **Root**: 3 markdown files
-- **Web App**: 2 markdown files
+- **Root**: 1 markdown file (`README.md`)
+- **Root docs/**: 3 markdown files
 - **Tests**: 3 markdown files
 
 ## 🎯 Key Directories

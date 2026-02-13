@@ -32,6 +32,7 @@ Application files ready:
 ```text
 touching_grass/
 |- fml-framework/          # Formula-first reusable framework
+|- docs/                   # Root project documentation
 |- mathf3-o/               # Form 3 web app
 |- mathf4-o/               # Form 4 web app
 |- python-scripts/         # Older Python implementations/reference
@@ -143,7 +144,7 @@ Routing fallback for deep links is handled by `vercel.json`.
 Official deployment branch policy:
 - Use `official-deployment` as the production deployment branch in Vercel.
 - That branch must be synced from approved `main` changes.
-- See `DEPLOYMENT_POLICY.md` for the required workflow.
+- See `docs/deployment/DEPLOYMENT_POLICY.md` for the required workflow.
 
 ## Pull request instructions
 
