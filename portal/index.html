@@ -1,41 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FML Framework | Math App Hub</title>
+    <title>FML Framework | Unified Math Portal</title>
     <meta
       name="description"
-      content="FML Framework main portal: launch Form 3 and Form 4 AI-powered math learning apps from one deployment."
+      content="Main FML portal for launching Form 3 and Form 4 math apps from one deployment."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Manrope:wght@400;500;700;800&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="ambient"></div>
-    <div class="noise"></div>
+    <div class="grid-layer" aria-hidden="true"></div>
+    <div class="glow glow-left" aria-hidden="true"></div>
+    <div class="glow glow-right" aria-hidden="true"></div>
 
     <header class="topbar">
-      <div class="brand">FML / HUB</div>
-      <nav class="nav-links" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="FML Home">FML HUB</a>
+      <nav class="topnav" aria-label="Main navigation">
         <a href="#apps">Apps</a>
         <a href="#framework">Framework</a>
         <a href="https://github.com/justelson/fml-framework" target="_blank" rel="noreferrer">GitHub</a>
       </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">
+        Theme: Dark
+      </button>
     </header>
 
-    <main>
-      <section class="hero" id="home">
-        <p class="eyebrow">ONE DEPLOYMENT - TWO FULL APPS</p>
+    <main class="layout" id="home">
+      <section class="hero">
+        <p class="eyebrow">Single deployment. Two full apps.</p>
         <h1>
-          FORMULA MATH LIBRARY
-          <span>LEARNING PORTAL</span>
+          Formula Math Library
+          <span>Unified Learning Portal</span>
         </h1>
         <p class="hero-copy">
-          Launch both curriculum apps from one Vercel URL. Each app keeps full chapter navigation,
-          AI tooling, and test-backed math workflows.
+          One root URL, two complete experiences. Launch Form 3 or Form 4 instantly,
+          each with chapters, calculators, AI assistance, and test-backed workflows.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="/3o/">Open Form 3</a>
@@ -43,67 +50,108 @@
         </div>
       </section>
 
+      <aside class="stats-panel" aria-label="Delivery metrics">
+        <p class="panel-label">Execution Signal</p>
+        <div class="metrics">
+          <article>
+            <h2>2</h2>
+            <p>curriculum apps</p>
+          </article>
+          <article>
+            <h2>+53</h2>
+            <p>math modules live</p>
+          </article>
+          <article>
+            <h2>1</h2>
+            <p>single deploy target</p>
+          </article>
+        </div>
+        <p class="panel-note">Production routes: <code>/3o/</code> and <code>/4o/</code></p>
+      </aside>
+
       <section class="apps" id="apps">
         <article class="app-card">
-          <p class="card-index">01</p>
-          <h2>MathF3-O</h2>
-          <p class="card-sub">Form 3 Basic Mathematics</p>
-          <p class="card-copy">
-            Relations, algebra, statistics, variations, sequences, circles, earth geometry,
-            accounting, plus AI-assisted solving.
+          <p class="card-kicker">Form 3</p>
+          <h3>MathF3-O</h3>
+          <p>
+            Relations, algebra, statistics, variations, sequences, circles,
+            earth geometry, accounting, and guided AI solving.
           </p>
-          <div class="card-tags">
+          <div class="tags">
             <span>React</span>
             <span>Chart.js</span>
             <span>Groq AI</span>
           </div>
-          <a class="card-link" href="/3o/">Launch App</a>
+          <a class="card-link" href="/3o/">Launch /3o/</a>
         </article>
 
         <article class="app-card">
-          <p class="card-index">02</p>
-          <h2>MathF4-O</h2>
-          <p class="card-sub">Form 4 Basic Mathematics</p>
-          <p class="card-copy">
-            Coordinate geometry, 3D figures, probability, trigonometry, vectors, matrices,
-            and linear programming with AI guidance.
+          <p class="card-kicker">Form 4</p>
+          <h3>MathF4-O</h3>
+          <p>
+            Coordinate geometry, 3D figures, probability, trigonometry,
+            vectors, matrices, and linear programming with AI support.
           </p>
-          <div class="card-tags">
+          <div class="tags">
             <span>React</span>
-            <span>Mafs + Three.js</span>
-            <span>Groq AI</span>
+            <span>Mafs</span>
+            <span>Three.js</span>
           </div>
-          <a class="card-link" href="/4o/">Launch App</a>
+          <a class="card-link" href="/4o/">Launch /4o/</a>
         </article>
       </section>
 
       <section class="framework" id="framework">
-        <h3>Framework at the core</h3>
-        <p>
-          Both applications are generated from the same FML formula-first architecture. You can extend
-          chapters, formulas, and AI tools while keeping a consistent structure across grade levels.
-        </p>
-        <div class="mini-grid">
-          <div>
-            <h4>Formula Modules</h4>
-            <p>`fml-framework/formulas/*.py`</p>
-          </div>
-          <div>
-            <h4>Reusable Templates</h4>
-            <p>`fml-framework/templates/`</p>
-          </div>
-          <div>
-            <h4>Workflow Guides</h4>
-            <p>`.agent/workflows/`</p>
-          </div>
+        <p class="panel-label">Framework Backbone</p>
+        <h4>Built from one formula-first system</h4>
+        <div class="framework-grid">
+          <article>
+            <h5>Define</h5>
+            <p>Author reusable formulas in <code>fml-framework/formulas</code>.</p>
+          </article>
+          <article>
+            <h5>Design</h5>
+            <p>Map tools and chapter experiences for each curriculum level.</p>
+          </article>
+          <article>
+            <h5>Deploy</h5>
+            <p>Ship portal and both apps from a single Vercel project output.</p>
+          </article>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>Built with FML Framework - MIT Licensed</p>
-      <p><a href="https://github.com/justelson/fml-framework" target="_blank" rel="noreferrer">github.com/justelson/fml-framework</a></p>
+    <footer class="footer">
+      <p>FML Framework | MIT Licensed</p>
+      <p>
+        <a href="https://github.com/justelson/fml-framework" target="_blank" rel="noreferrer">
+          github.com/justelson/fml-framework
+        </a>
+      </p>
     </footer>
+
+    <script>
+      (function () {
+        const STORAGE_KEY = 'fml-portal-theme';
+        const root = document.documentElement;
+        const button = document.getElementById('themeToggle');
+
+        function applyTheme(theme) {
+          root.setAttribute('data-theme', theme);
+          button.textContent = `Theme: ${theme === 'dark' ? 'Dark' : 'Light'}`;
+          button.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+        }
+
+        const saved = localStorage.getItem(STORAGE_KEY);
+        const initial = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        applyTheme(initial);
+
+        button.addEventListener('click', function () {
+          const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          localStorage.setItem(STORAGE_KEY, next);
+          applyTheme(next);
+        });
+      })();
+    </script>
   </body>
 </html>
-
