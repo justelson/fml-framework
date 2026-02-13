@@ -206,6 +206,17 @@ p {
   border-style: solid;
 }
 
+.portal-link {
+  border-color: var(--signal);
+  color: var(--signal);
+  text-align: center;
+}
+
+.portal-link:hover {
+  color: var(--text);
+  border-color: var(--oxide-bright);
+}
+
 .panel {
   border: 1px solid var(--line);
   background: var(--panel);
