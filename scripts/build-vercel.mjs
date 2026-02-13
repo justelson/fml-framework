@@ -37,9 +37,13 @@ function main() {
   cpSync(resolve(root, 'mathf3-o', 'dist'), resolve(deployDir, '3o'), { recursive: true });
   cpSync(resolve(root, 'mathf4-o', 'dist'), resolve(deployDir, '4o'), { recursive: true });
   cpSync(resolve(root, 'portal', 'index.html'), resolve(deployDir, 'index.html'));
+  cpSync(resolve(root, 'portal', 'project.html'), resolve(deployDir, 'project.html'));
+  cpSync(resolve(root, 'portal', 'curriculum.html'), resolve(deployDir, 'curriculum.html'));
+  cpSync(resolve(root, 'portal', 'deployment.html'), resolve(deployDir, 'deployment.html'));
   cpSync(resolve(root, 'portal', 'styles.css'), resolve(deployDir, 'styles.css'));
+  cpSync(resolve(root, 'portal', 'theme.js'), resolve(deployDir, 'theme.js'));
 
-  console.log('Build completed: deploy/ now contains portal + 3o + 4o');
+  console.log('Build completed: deploy/ now contains multi-page portal + 3o + 4o');
 }
 
 main();

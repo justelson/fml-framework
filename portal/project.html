@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FML Framework | Project Overview</title>
+    <meta
+      name="description"
+      content="Project architecture and implementation flow for the FML Framework and math apps."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Manrope:wght@400;500;700;800&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="content-page">
+    <div class="grid-layer" aria-hidden="true"></div>
+    <div class="glow glow-left" aria-hidden="true"></div>
+    <div class="glow glow-right" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="/index.html" aria-label="FML Home">FML HUB</a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a data-nav="index.html" href="/index.html">Home</a>
+        <a data-nav="project.html" href="/project.html">Project</a>
+        <a data-nav="curriculum.html" href="/curriculum.html">Curriculum</a>
+        <a data-nav="deployment.html" href="/deployment.html">Deployment</a>
+        <a href="https://github.com/justelson/fml-framework" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <button data-theme-toggle class="theme-toggle" type="button" aria-pressed="false">
+        Theme: Dark
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <p class="eyebrow">Project Architecture</p>
+        <h1>How this project is structured</h1>
+        <p>
+          FML keeps formulas, app UI, and deployment concerns separated so curriculum updates do not
+          require rewriting the full stack.
+        </p>
+      </section>
+
+      <section class="content-grid">
+        <article class="content-card accent-a">
+          <h2>Formula Layer</h2>
+          <p>
+            Core math logic starts in <code>fml-framework/formulas</code> with reusable Python definitions.
+            App-level JavaScript mirrors these formulas in each app's <code>src/lib/math.js</code>.
+          </p>
+        </article>
+        <article class="content-card accent-b">
+          <h2>Tool Layer</h2>
+          <p>
+            AI-callable tools are defined in <code>aiTools.js</code> and executed through
+            <code>toolDispatcher.js</code>. This keeps natural-language prompts mapped to deterministic solvers.
+          </p>
+        </article>
+        <article class="content-card accent-c">
+          <h2>Curriculum Layer</h2>
+          <p>
+            Chapters are organized in <code>src/chapters</code>, where each module combines lesson content,
+            input forms, result rendering, and optional visualization blocks.
+          </p>
+        </article>
+      </section>
+
+      <section class="content-row">
+        <article class="content-panel accent-b">
+          <h3>Repository map</h3>
+          <ul>
+            <li><code>fml-framework/</code> reusable formulas and templates</li>
+            <li><code>mathf3-o/</code> Form 3 app</li>
+            <li><code>mathf4-o/</code> Form 4 app</li>
+            <li><code>portal/</code> multi-page root website</li>
+            <li><code>scripts/build-vercel.mjs</code> unified deployment assembly</li>
+          </ul>
+        </article>
+        <article class="content-panel accent-a">
+          <h3>Extension model</h3>
+          <p>
+            To add a new syllabus level, clone the app structure, map chapter outcomes, implement formulas,
+            and register matching tool schemas. The portal can then link the new route as another live page.
+          </p>
+          <a class="mini-cta" href="/curriculum.html">See curriculum adaptation</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>FML Framework | Project Page</p>
+      <p><a href="/index.html">Back to home</a></p>
+    </footer>
+
+    <script src="/theme.js"></script>
+  </body>
+</html>

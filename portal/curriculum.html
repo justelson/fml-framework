@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FML Framework | Curriculum Model</title>
+    <meta
+      name="description"
+      content="Curriculum mapping for TZ old syllabus and portability to other math education systems."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Manrope:wght@400;500;700;800&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="content-page">
+    <div class="grid-layer" aria-hidden="true"></div>
+    <div class="glow glow-left" aria-hidden="true"></div>
+    <div class="glow glow-right" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="/index.html" aria-label="FML Home">FML HUB</a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a data-nav="index.html" href="/index.html">Home</a>
+        <a data-nav="project.html" href="/project.html">Project</a>
+        <a data-nav="curriculum.html" href="/curriculum.html">Curriculum</a>
+        <a data-nav="deployment.html" href="/deployment.html">Deployment</a>
+        <a href="https://github.com/justelson/fml-framework" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <button data-theme-toggle class="theme-toggle" type="button" aria-pressed="false">
+        Theme: Dark
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <p class="eyebrow">Curriculum Adaptation</p>
+        <h1>Built for TZ old syllabus, adaptable to any math system</h1>
+        <p>
+          Current implementations target Tanzanian old syllabus Form 3 and Form 4, but FML architecture
+          supports direct adaptation to any school math structure or concept set.
+        </p>
+      </section>
+
+      <section class="content-grid">
+        <article class="content-card accent-a">
+          <h2>Current coverage</h2>
+          <p>
+            <strong>Form 3:</strong> relations/functions, algebra, statistics, variation, sequences,
+            circles, earth geometry, accounting.
+          </p>
+          <p>
+            <strong>Form 4:</strong> coordinate geometry, area/perimeter, 3D figures, probability,
+            trigonometry, vectors, matrices, linear programming.
+          </p>
+        </article>
+        <article class="content-card accent-b">
+          <h2>Portable unit model</h2>
+          <p>
+            Each chapter is a portable unit: outcomes, formulas, tool schemas, sample prompts, and tests.
+            This lets you remap topics to another syllabus without rebuilding from zero.
+          </p>
+        </article>
+        <article class="content-card accent-c">
+          <h2>Concept-first mode</h2>
+          <p>
+            FML can also be arranged by concept families (functions, trigonometry, statistics, finance)
+            rather than grade-level chapters, depending on school requirements.
+          </p>
+        </article>
+      </section>
+
+      <section class="content-row">
+        <article class="content-panel accent-c">
+          <h3>Adaptation workflow</h3>
+          <ol>
+            <li>Define curriculum outcomes and exam scope.</li>
+            <li>Map outcomes to formula modules and missing solvers.</li>
+            <li>Create chapter pages with local examples and language.</li>
+            <li>Register AI tools and run quick/advanced validation tests.</li>
+            <li>Deploy as a new route in the same portal or a standalone app.</li>
+          </ol>
+        </article>
+        <article class="content-panel accent-b">
+          <h3>Examples of adaptable targets</h3>
+          <ul>
+            <li>National secondary school math syllabi</li>
+            <li>IB, Cambridge, or regional exam boards</li>
+            <li>University bridge/prep math tracks</li>
+            <li>Topic-only programs (statistics-only, algebra-only)</li>
+          </ul>
+          <a class="mini-cta" href="/deployment.html">See deployment options</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>FML Framework | Curriculum Page</p>
+      <p><a href="/index.html">Back to home</a></p>
+    </footer>
+
+    <script src="/theme.js"></script>
+  </body>
+</html>
