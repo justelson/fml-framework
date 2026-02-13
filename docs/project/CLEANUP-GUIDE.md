@@ -41,7 +41,7 @@ rmdir /s /q .ai-powers
 - `python-scripts/` - Organized Python code
 - `textbook/` - PDF reference
 - `README.md` - Main documentation
-- `PROJECT-STRUCTURE.md` - Structure guide
+- `docs/project/PROJECT-STRUCTURE.md` - Structure guide
 - `.gitignore` - Git rules
 - `requirements.txt` - Python dependencies
 
@@ -55,8 +55,8 @@ touching_grass/
 ├── python-scripts/      # 🐍 Python code
 ├── textbook/            # 📚 PDF reference
 ├── README.md
-├── PROJECT-STRUCTURE.md
-├── CLEANUP-GUIDE.md
+├── docs/project/PROJECT-STRUCTURE.md
+├── docs/project/CLEANUP-GUIDE.md
 ├── .gitignore
 └── requirements.txt
 ```
@@ -103,7 +103,7 @@ If automated deletion fails:
    - `.venv` (if not using Python)
    - `.ai-powers` (if not using)
 
-4. Verify structure matches PROJECT-STRUCTURE.md
+4. Verify structure matches docs/project/PROJECT-STRUCTURE.md
 
 ## ✨ Result
 
