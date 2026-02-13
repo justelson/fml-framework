@@ -181,10 +181,4 @@ If a real key was ever exposed outside this repo, rotate it immediately in the p
 
 This project is licensed under the MIT License. See `LICENSE`.
 
-## Submission text (ready to copy)
 
-Full description:
-FML Framework is a reusable formula-first system for building math education apps. This repo includes two production-ready React apps (`mathf3-o` and `mathf4-o`) where learners ask math questions in plain language, AI routes requests to validated math tools, and the app returns explained results with interactive visuals. Source: `https://github.com/justelson/fml-framework`.
-
-Instagram-length comment:
-Built with the FML Framework: two AI-powered math learning apps (Form 3 + Form 4) that turn plain-language math questions into computed, step-by-step answers with visuals. Install with `npm install`, set `VITE_GROQ_API_KEY`, run `npm run dev`, then deploy the `dist/` build on Vercel/Netlify/Cloudflare or any static host. Open source at `https://github.com/justelson/fml-framework`.
