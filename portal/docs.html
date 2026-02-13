@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FML Framework | Documentation</title>
+    <meta
+      name="description"
+      content="User and developer documentation for the FML Framework portal and math learning apps."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="content-page docs-page">
+    <div class="grid-layer" aria-hidden="true"></div>
+    <div class="glow glow-left" aria-hidden="true"></div>
+    <div class="glow glow-right" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="/index.html" aria-label="FML Home">FML HUB</a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a data-nav="index.html" href="/index.html">Home</a>
+        <a data-nav="project.html" href="/project.html">Project</a>
+        <a data-nav="curriculum.html" href="/curriculum.html">Curriculum</a>
+        <a data-nav="deployment.html" href="/deployment.html">Deployment</a>
+        <a data-nav="docs.html" href="/docs.html">Docs</a>
+        <a href="https://github.com/justelson/fml-framework" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <button data-theme-toggle class="theme-toggle" type="button" aria-pressed="false">
+        Theme: Dark
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <p class="eyebrow">Documentation</p>
+        <h1>User + developer docs in one place</h1>
+        <p>
+          This page is the primary docs hub for students, teachers, and maintainers. It covers
+          practical usage, setup, architecture, deployment flow, and security policy.
+        </p>
+      </section>
+
+      <section class="docs-shell">
+        <aside class="docs-sidebar">
+          <p class="panel-label">On this page</p>
+          <nav class="docs-nav" aria-label="Documentation sections">
+            <a href="#quickstart">Quick Start</a>
+            <a href="#user-docs">User Guide</a>
+            <a href="#developer-docs">Developer Guide</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#deployment">Deployment</a>
+            <a href="#security">Security</a>
+          </nav>
+          <div class="docs-links">
+            <a class="mini-cta" href="/3o/">Open Form 3 App</a>
+            <a class="mini-cta" href="/4o/">Open Form 4 App</a>
+            <a
+              class="mini-cta"
+              href="https://github.com/justelson/fml-framework/tree/main/docs"
+              target="_blank"
+              rel="noreferrer"
+              >View `/docs` on GitHub</a
+            >
+          </div>
+        </aside>
+
+        <div class="docs-content">
+          <section class="doc-section accent-a" id="quickstart">
+            <h2>Quick Start</h2>
+            <div class="doc-columns">
+              <article class="doc-panel">
+                <h3>For users</h3>
+                <ol>
+                  <li>Open the portal home.</li>
+                  <li>Select <code>/3o/</code> or <code>/4o/</code> based on level.</li>
+                  <li>Choose a chapter and run formula tools from the lesson page.</li>
+                  <li>Use the AI assist page for guided, step-by-step solving.</li>
+                </ol>
+              </article>
+              <article class="doc-panel">
+                <h3>For developers</h3>
+                <ol>
+                  <li>Clone repo and run <code>npm install</code> in root.</li>
+                  <li>Run local apps: <code>cd mathf3-o && npm run dev</code>.</li>
+                  <li>Run local apps: <code>cd mathf4-o && npm run dev</code>.</li>
+                  <li>Run release build from root: <code>npm run build</code>.</li>
+                </ol>
+              </article>
+            </div>
+          </section>
+
+          <section class="doc-section accent-b" id="user-docs">
+            <h2>User Guide</h2>
+            <p>
+              FML is designed for syllabus-based math study with direct formula execution. Every chapter
+              combines concept notes, calculators, and worked outputs so learners can verify steps quickly.
+            </p>
+            <ul>
+              <li><strong>Chapter workflow:</strong> pick topic, enter values, read interpreted results.</li>
+              <li><strong>AI workflow:</strong> ask in plain language, then cross-check formula output.</li>
+              <li><strong>Curriculum scope:</strong> TZ old syllabus baseline, adaptable to other systems.</li>
+              <li><strong>Best practice:</strong> use the app as a verification and understanding tool.</li>
+            </ul>
+          </section>
+
+          <section class="doc-section accent-c" id="developer-docs">
+            <h2>Developer Guide</h2>
+            <p>
+              The repository uses a shared framework plus two production apps. Add new chapters by
+              implementing formulas, wiring tools, and connecting chapter UI components.
+            </p>
+            <div class="doc-columns">
+              <article class="doc-panel">
+                <h3>Key paths</h3>
+                <ul>
+                  <li><code>fml-framework/</code> shared formulas/templates</li>
+                  <li><code>mathf3-o/src/chapters</code> Form 3 pages</li>
+                  <li><code>mathf4-o/src/chapters</code> Form 4 pages</li>
+                  <li><code>portal/</code> deployment landing pages</li>
+                  <li><code>scripts/build-vercel.mjs</code> release build assembler</li>
+                </ul>
+              </article>
+              <article class="doc-panel">
+                <h3>Common commands</h3>
+                <ul>
+                  <li><code>npm run build</code> - build both apps + portal into <code>deploy/</code></li>
+                  <li><code>npm run dev</code> - run portal dev workflow (if configured)</li>
+                  <li><code>npm run test</code> - execute app test commands (per app scope)</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="doc-section accent-a" id="architecture">
+            <h2>Architecture</h2>
+            <p>
+              The system is formula-first. Solvers stay deterministic, while AI prompting is routed through
+              tool schemas and dispatchers. This keeps outputs reproducible and easier to audit.
+            </p>
+            <ul>
+              <li><strong>Formula layer:</strong> pure math logic and helper functions.</li>
+              <li><strong>Tool layer:</strong> AI-callable schemas mapped to solver functions.</li>
+              <li><strong>UI layer:</strong> chapter pages for input, explanation, and visualization.</li>
+              <li><strong>Portal layer:</strong> route launcher, docs, and deployment metadata.</li>
+            </ul>
+          </section>
+
+          <section class="doc-section accent-c" id="deployment">
+            <h2>Deployment</h2>
+            <ol>
+              <li>Approve changes on <code>main</code>.</li>
+              <li>Sync approved release commit(s) to <code>official-deployment</code>.</li>
+              <li>Set Vercel production branch to <code>official-deployment</code>.</li>
+              <li>Deploy <code>deploy/</code> output with routes <code>/3o/</code> and <code>/4o/</code>.</li>
+            </ol>
+            <p>
+              Primary reference: <a class="inline-link" href="/deployment.html">deployment page</a>.
+            </p>
+          </section>
+
+          <section class="doc-section accent-b" id="security">
+            <h2>Security and key handling</h2>
+            <p>
+              Private keys must not be committed. API credentials should be provided through deployment
+              environment variables only.
+            </p>
+            <ul>
+              <li>Store keys in Vercel project environment settings.</li>
+              <li>Never hardcode tokens in source files.</li>
+              <li>Use pre-release checks before pushing deployment branches.</li>
+              <li>Rotate keys immediately if exposure is suspected.</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>FML Framework | Docs Page</p>
+      <p><a href="/index.html">Back to home</a></p>
+    </footer>
+
+    <script src="/theme.js"></script>
+  </body>
+</html>

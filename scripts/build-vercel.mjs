@@ -40,6 +40,7 @@ function main() {
   cpSync(resolve(root, 'portal', 'project.html'), resolve(deployDir, 'project.html'));
   cpSync(resolve(root, 'portal', 'curriculum.html'), resolve(deployDir, 'curriculum.html'));
   cpSync(resolve(root, 'portal', 'deployment.html'), resolve(deployDir, 'deployment.html'));
+  cpSync(resolve(root, 'portal', 'docs.html'), resolve(deployDir, 'docs.html'));
   cpSync(resolve(root, 'portal', 'styles.css'), resolve(deployDir, 'styles.css'));
   cpSync(resolve(root, 'portal', 'theme.js'), resolve(deployDir, 'theme.js'));
 
