@@ -6,7 +6,7 @@
     <title>FML Framework | Unified Math Portal</title>
     <meta
       name="description"
-      content="Main FML portal for launching Form 3 and Form 4 math apps from one deployment."
+      content="Main FML portal for Form 3 and Form 4 math apps with framework, curriculum, and deployment pages."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,33 +16,36 @@
     />
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
+  <body class="portal-home">
     <div class="grid-layer" aria-hidden="true"></div>
     <div class="glow glow-left" aria-hidden="true"></div>
     <div class="glow glow-right" aria-hidden="true"></div>
 
     <header class="topbar">
-      <a class="brand" href="#home" aria-label="FML Home">FML HUB</a>
+      <a class="brand" href="/index.html" aria-label="FML Home">FML HUB</a>
       <nav class="topnav" aria-label="Main navigation">
-        <a href="#apps">Apps</a>
-        <a href="#framework">Framework</a>
+        <a data-nav="index.html" href="/index.html">Home</a>
+        <a data-nav="project.html" href="/project.html">Project</a>
+        <a data-nav="curriculum.html" href="/curriculum.html">Curriculum</a>
+        <a data-nav="deployment.html" href="/deployment.html">Deployment</a>
         <a href="https://github.com/justelson/fml-framework" target="_blank" rel="noreferrer">GitHub</a>
       </nav>
-      <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">
+      <button data-theme-toggle class="theme-toggle" type="button" aria-pressed="false">
         Theme: Dark
       </button>
     </header>
 
     <main class="layout" id="home">
       <section class="hero">
-        <p class="eyebrow">Single deployment. Two full apps.</p>
+        <p class="eyebrow">Single deployment. Two full apps. One reusable architecture.</p>
         <h1>
           Formula Math Library
           <span>Unified Learning Portal</span>
         </h1>
         <p class="hero-copy">
-          One root URL, two complete experiences. Launch Form 3 or Form 4 instantly,
-          each with chapters, calculators, AI assistance, and test-backed workflows.
+          FML is a formula-first math app system. This portal is the project front door:
+          launch the two live apps, review the framework approach, and see how deployment
+          and curriculum mapping work in practice.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="/3o/">Open Form 3</a>
@@ -50,27 +53,27 @@
         </div>
       </section>
 
-      <aside class="stats-panel" aria-label="Delivery metrics">
+      <aside class="stats-panel" aria-label="Project metrics">
         <p class="panel-label">Execution Signal</p>
         <div class="metrics">
-          <article>
+          <article class="metric-accent-a">
             <h2>2</h2>
-            <p>curriculum apps</p>
+            <p>full curriculum apps</p>
           </article>
-          <article>
+          <article class="metric-accent-b">
             <h2>+53</h2>
-            <p>math modules live</p>
+            <p>math tools and formulas</p>
           </article>
-          <article>
+          <article class="metric-accent-c">
             <h2>1</h2>
-            <p>single deploy target</p>
+            <p>shared deploy target</p>
           </article>
         </div>
         <p class="panel-note">Production routes: <code>/3o/</code> and <code>/4o/</code></p>
       </aside>
 
       <section class="apps" id="apps">
-        <article class="app-card">
+        <article class="app-card accent-a">
           <p class="card-kicker">Form 3</p>
           <h3>MathF3-O</h3>
           <p>
@@ -85,7 +88,7 @@
           <a class="card-link" href="/3o/">Launch /3o/</a>
         </article>
 
-        <article class="app-card">
+        <article class="app-card accent-b">
           <p class="card-kicker">Form 4</p>
           <h3>MathF4-O</h3>
           <p>
@@ -102,20 +105,23 @@
       </section>
 
       <section class="framework" id="framework">
-        <p class="panel-label">Framework Backbone</p>
-        <h4>Built from one formula-first system</h4>
+        <p class="panel-label">Main Pages</p>
+        <h4>Explore the project beyond app launch links</h4>
         <div class="framework-grid">
-          <article>
-            <h5>Define</h5>
-            <p>Author reusable formulas in <code>fml-framework/formulas</code>.</p>
+          <article class="accent-a">
+            <h5>Project Page</h5>
+            <p>System architecture, folder map, formula flow, and extension model.</p>
+            <a class="inline-link" href="/project.html">Open project page</a>
           </article>
-          <article>
-            <h5>Design</h5>
-            <p>Map tools and chapter experiences for each curriculum level.</p>
+          <article class="accent-b">
+            <h5>Curriculum Page</h5>
+            <p>TZ old syllabus coverage and adaptation model for any math school system.</p>
+            <a class="inline-link" href="/curriculum.html">Open curriculum page</a>
           </article>
-          <article>
-            <h5>Deploy</h5>
-            <p>Ship portal and both apps from a single Vercel project output.</p>
+          <article class="accent-c">
+            <h5>Deployment Page</h5>
+            <p>Official branch flow, hosting routes, and operational deployment checklist.</p>
+            <a class="inline-link" href="/deployment.html">Open deployment page</a>
           </article>
         </div>
       </section>
@@ -130,28 +136,6 @@
       </p>
     </footer>
 
-    <script>
-      (function () {
-        const STORAGE_KEY = 'fml-portal-theme';
-        const root = document.documentElement;
-        const button = document.getElementById('themeToggle');
-
-        function applyTheme(theme) {
-          root.setAttribute('data-theme', theme);
-          button.textContent = `Theme: ${theme === 'dark' ? 'Dark' : 'Light'}`;
-          button.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-        }
-
-        const saved = localStorage.getItem(STORAGE_KEY);
-        const initial = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        applyTheme(initial);
-
-        button.addEventListener('click', function () {
-          const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          localStorage.setItem(STORAGE_KEY, next);
-          applyTheme(next);
-        });
-      })();
-    </script>
+    <script src="/theme.js"></script>
   </body>
 </html>
