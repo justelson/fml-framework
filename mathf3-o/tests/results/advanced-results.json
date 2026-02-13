@@ -1,0 +1,51 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "success": true,
+      "toolScore": 50,
+      "answerScore": 50,
+      "totalScore": 100
+    },
+    {
+      "id": 2,
+      "difficulty": "medium",
+      "success": true,
+      "toolScore": 50,
+      "answerScore": 50,
+      "totalScore": 100
+    },
+    {
+      "id": 3,
+      "difficulty": "hard",
+      "success": true,
+      "toolScore": 50,
+      "answerScore": 50,
+      "totalScore": 100
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "success": true,
+      "toolScore": 50,
+      "answerScore": 50,
+      "totalScore": 100
+    },
+    {
+      "id": 5,
+      "difficulty": "hard",
+      "success": true,
+      "toolScore": 50,
+      "answerScore": 50,
+      "totalScore": 100
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "perfect": 5,
+    "partial": 0,
+    "failed": 0,
+    "averageScore": 100
+  }
+}

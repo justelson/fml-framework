@@ -5,8 +5,8 @@ Instructions for removing legacy folders and keeping the codebase clean.
 ## ✅ Already Cleaned
 
 - ✅ Python scripts moved to `python-scripts/`
-- ✅ Old test files removed from `mathf3-web/`
-- ✅ Test system unified in `mathf3-web/tests/`
+- ✅ Old test files removed from `mathf3-o/`
+- ✅ Test system unified in `mathf3-o/tests/`
 - ✅ Documentation organized
 - ✅ `.gitignore` updated
 
@@ -37,7 +37,7 @@ rmdir /s /q .ai-powers
 ## 📁 Keep These
 
 **DO NOT DELETE:**
-- `mathf3-web/` - Main web application
+- `mathf3-o/` - Main web application
 - `python-scripts/` - Organized Python code
 - `textbook/` - PDF reference
 - `README.md` - Main documentation
@@ -51,7 +51,7 @@ After cleanup, your structure should be:
 
 ```
 touching_grass/
-├── mathf3-web/          # ⭐ Main web app
+├── mathf3-o/            # ⭐ Main web app
 ├── python-scripts/      # 🐍 Python code
 ├── textbook/            # 📚 PDF reference
 ├── README.md

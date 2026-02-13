@@ -1,7 +1,7 @@
 {
-  "name": "mathf3-web",
+  "name": "{{APP_NAME}}",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,12 +9,7 @@
     "preview": "vite preview",
     "test:simple": "node tests/simple-test.js",
     "test:simple:quick": "node tests/simple-test.js --limit=5",
-    "test:advanced": "node tests/advanced-test.js",
-    "test:advanced:quick": "node tests/advanced-test.js --limit=5",
-    "test:advanced:random": "node tests/advanced-test.js --random --limit=10",
-    "test:advanced:easy": "node tests/advanced-test.js --difficulty=easy",
-    "test:advanced:medium": "node tests/advanced-test.js --difficulty=medium",
-    "test:advanced:hard": "node tests/advanced-test.js --difficulty=hard"
+    "test:advanced": "node tests/advanced-test.js"
   },
   "dependencies": {
     "chart.js": "^4.4.1",

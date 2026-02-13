@@ -19,7 +19,7 @@ Check `fml-framework/formulas/` for existing implementations:
 - `accounting.py` - Balance sheets, profit/loss
 
 ### 3. Study the Reference Implementation
-Look at `mathf3-web/` (Form 3 Math) to understand:
+Look at `mathf3-o/` (Form 3 Math - Old Syllabus) to understand:
 - Project structure
 - UI component patterns
 - AI integration approach
@@ -102,12 +102,13 @@ Use the same pattern as Form 3:
 
 ## Example Prompt for AI Agents
 
-"Build a Form 4 Mathematics application using the FML Framework. Include topics: Trigonometry, Vectors, Matrices, and Logarithms. Follow the structure of mathf3-web/ and use formulas from fml-framework/formulas/. Add new formula files for topics not yet covered."
+"Build a Form 4 Mathematics application using the FML Framework. Include topics: Trigonometry, Vectors, Matrices, and Logarithms. Follow the structure of mathf3-o/ and use formulas from fml-framework/formulas/. Add new formula files for topics not yet covered."
 
 ## File Locations
 - **Formulas**: `fml-framework/formulas/*.py`
-- **Reference**: `mathf3-web/` (Form 3 implementation)
+- **Reference**: `mathf3-o/` (Form 3 implementation)
 - **Documentation**: `fml-framework/README.md`
+
 - **This Guide**: `fml-framework/QUICK_START.md`
 
 ## Benefits of This Approach
@@ -119,7 +120,7 @@ Use the same pattern as Form 3:
 
 ## Next Steps
 1. Review the formulas in `fml-framework/formulas/`
-2. Study the Form 3 implementation in `mathf3-web/`
+2. Study the Form 3 implementation in `mathf3-o/`
 3. Identify what new formulas are needed
 4. Build the new application following the same patterns
 5. Test with the AI explanation system

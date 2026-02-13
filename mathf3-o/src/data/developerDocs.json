@@ -16,7 +16,7 @@
         {
           "type": "code",
           "language": "text",
-          "text": "mathf3-web/\n├── src/\n│   ├── chapters/      # Chapter components\n│   ├── components/    # Reusable UI components\n│   ├── lib/          # Core logic and utilities\n│   │   ├── math.js   # Formula implementations\n│   │   ├── aiTools.js # AI tool definitions\n│   │   └── groqService.js # AI integration\n│   └── styles.css    # Global styles\n├── package.json\n└── vite.config.js"
+          "text": "mathf3-o/\n├── src/\n│   ├── chapters/      # Chapter components\n│   ├── components/    # Reusable UI components\n│   ├── lib/          # Core logic and utilities\n│   │   ├── math.js   # Formula implementations\n│   │   ├── aiTools.js # AI tool definitions\n│   │   └── groqService.js # AI integration\n│   └── styles.css    # Global styles\n├── package.json\n└── vite.config.js"
         },
         {
           "type": "heading",
@@ -281,7 +281,7 @@
         {
           "type": "code",
           "language": "bash",
-          "text": "# Copy structure\ncp -r mathf3-web mathf4-web\n\n# Update package.json name\n# Add new formulas to fml-framework/formulas/\n# Update chapters for Form 4 curriculum"
+          "text": "# Copy structure\ncp -r mathf3-o mathf4-web\n\n# Update package.json name\n# Add new formulas to fml-framework/formulas/\n# Update chapters for Form 4 curriculum"
         },
         {
           "type": "callout",

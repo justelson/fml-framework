@@ -132,7 +132,7 @@ Consider applying similar layout patterns to:
 7. Send messages to verify chat functionality
 
 ## Files Modified
-- `mathf3-web/src/chapters/AIAssist.jsx` - Complete redesign with two-column layout
+- `mathf3-o/src/chapters/AIAssist.jsx` - Complete redesign with two-column layout
 
 ## Design Principles Reference
 Based on `.ai-powers/.agent/skills/frontend-design/ux-psychology.md`:

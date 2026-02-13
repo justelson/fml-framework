@@ -152,6 +152,39 @@ def calculate_cylinder_properties(radius, height):
     }
 
 
+def calculate_cone_properties(radius, height, slant_height=None):
+    """
+    Calculate surface area and volume of a cone
+    """
+    if slant_height is None:
+        slant_height = math.sqrt(radius**2 + height**2)
+        
+    base_area = math.pi * radius ** 2
+    lateral_area = math.pi * radius * slant_height
+    surface_area = base_area + lateral_area
+    volume = (1/3) * base_area * height
+    
+    return {
+        "surface_area": surface_area,
+        "volume": volume,
+        "slant_height": slant_height
+    }
+
+
+def calculate_pyramid_properties(base_area, perimeter, height, slant_height):
+    """
+    Calculate properties of a pyramid
+    """
+    lateral_area = 0.5 * perimeter * slant_height
+    surface_area = base_area + lateral_area
+    volume = (1/3) * base_area * height
+    
+    return {
+        "surface_area": surface_area,
+        "volume": volume
+    }
+
+
 # Formula metadata for AI agents
 FORMULAS = {
     "calculate_circle_properties": {
@@ -202,5 +235,19 @@ FORMULAS = {
         "category": "geometry",
         "parameters": ["radius", "height"],
         "function": calculate_cylinder_properties
+    },
+    "calculate_cone_properties": {
+        "name": "Cone Properties",
+        "description": "Calculate surface area and volume of a cone",
+        "category": "geometry",
+        "parameters": ["radius", "height"],
+        "function": calculate_cone_properties
+    },
+    "calculate_pyramid_properties": {
+        "name": "Pyramid Properties",
+        "description": "Surface area and volume of pyramid",
+        "category": "geometry",
+        "parameters": ["base_area", "perimeter", "height", "slant_height"],
+        "function": calculate_pyramid_properties
     }
 }

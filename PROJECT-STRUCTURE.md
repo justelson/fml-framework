@@ -7,40 +7,33 @@ Clean, organized codebase for MathF3 learning platform.
 ```
 touching_grass/
 │
-├── 📱 mathf3-web/                    # Main web application
+├── 📂 fml-framework/                 # SHARED - Core formula library
+│   ├── formulas/                    # Python implementations (source of truth)
+│   ├── templates/                   # Project templates
+│   ├── AGENT_GUIDE.md               # Master AI instructions
+│   └── QUICK_START.md               # Guide for AI agents
+│
+├── 📱 mathf3-o/                      # Form 3 Math (Old Syllabus)
 │   ├── src/
 │   │   ├── chapters/                # 8 math chapters (React components)
 │   │   ├── components/              # Reusable UI components
 │   │   └── lib/                     # Core logic & AI integration
 │   ├── tests/                       # AI testing suite
-│   │   ├── data/                    # Test problems & tool definitions
-│   │   ├── results/                 # Auto-generated test results
-│   │   ├── simple-test.js          # Tool selection validator
-│   │   ├── advanced-test.js        # Full validation tester
-│   │   └── *.md                    # Test documentation
-│   ├── .env                        # API keys (not in git)
-│   ├── .env.example                # Template
-│   ├── package.json                # Dependencies & scripts
-│   ├── README.md                   # Web app documentation
-│   └── TESTING.md                  # Testing guide
+│   ├── package.json                 # Dependencies & scripts
+│   └── README.md                    # Web app documentation
 │
 ├── 🐍 python-scripts/               # Original Python implementations
-│   ├── exe.py                      # Executable script
-│   ├── script.py                   # Math play script
 │   ├── gui_app.py                  # GUI application
-│   ├── script-gem.py               # Gemini integration
-│   ├── script-nblm.py              # NBLM integration
-│   ├── script-studio.py            # Studio integration
 │   └── README.md                   # Python scripts info
 │
 ├── 📚 textbook/                     # Reference materials
-│   └── Basic maths F3 Wazaelimu.com.pdf
 │
-├── 🔧 Configuration Files
-│   ├── .gitignore                  # Git ignore rules
-│   ├── requirements.txt            # Python dependencies
-│   ├── README.md                   # Main project README
-│   └── PROJECT-STRUCTURE.md        # This file
+└── 🔧 Configuration Files
+    ├── .agent/                     # AI Agent Workflows
+    ├── .gitignore                  # Git ignore rules
+    ├── requirements.txt            # Python dependencies
+    ├── README.md                   # Main project README
+    └── PROJECT-STRUCTURE.md        # This file
 │
 └── 🗑️ Legacy (empty, can be deleted)
     ├── math-play/                  # (Python files moved)
@@ -51,7 +44,7 @@ touching_grass/
 
 ## 📊 File Count Summary
 
-### Active Project (mathf3-web/)
+### Active Project (mathf3-o/)
 - **React Components**: 11 files
 - **JavaScript Modules**: 7 files
 - **Test Files**: 2 runners + 3 data files
@@ -69,7 +62,7 @@ touching_grass/
 
 ## 🎯 Key Directories
 
-### `/mathf3-web/src/`
+### `/mathf3-o/src/`
 **Purpose**: Main application source code
 
 **Contents**:
@@ -80,7 +73,7 @@ touching_grass/
 - `main.jsx` - Entry point
 - `styles.css` - Global styles
 
-### `/mathf3-web/tests/`
+### `/mathf3-o/tests/`
 **Purpose**: AI testing and validation
 
 **Contents**:
@@ -113,7 +106,7 @@ touching_grass/
 - From `mathf3/` (4 files)
 
 ### Deleted
-✅ Old test files from `mathf3-web/` root:
+✅ Old test files from `mathf3-o/` root:
 - `test-ai-tools.js`
 - `advanced-test-runner.js`
 - `test-problems.json`
@@ -123,7 +116,7 @@ touching_grass/
 - `TEST_README.md`
 
 ### Organized
-✅ Test system → `mathf3-web/tests/`
+✅ Test system → `mathf3-o/tests/`
 - Unified structure
 - Clear documentation
 - Proper data separation
@@ -136,12 +129,12 @@ README.md (Root)
 ├── Project overview
 └── Links to detailed docs
     │
-    ├── mathf3-web/README.md
+    ├── mathf3-o/README.md
     │   ├── Web app details
     │   ├── Features
     │   └── Development guide
     │
-    ├── mathf3-web/TESTING.md
+    ├── mathf3-o/TESTING.md
     │   ├── Testing overview
     │   ├── Quick commands
     │   └── Links to test docs
@@ -163,17 +156,17 @@ README.md (Root)
 
 ### For Users
 1. Read `README.md` (root)
-2. Navigate to `mathf3-web/`
-3. Follow `mathf3-web/README.md`
+2. Navigate to `mathf3-o/`
+3. Follow `mathf3-o/README.md`
 
 ### For Developers
 1. Read `README.md` (root)
-2. Read `mathf3-web/README.md`
-3. Read `mathf3-web/TESTING.md`
+2. Read `mathf3-o/README.md`
+3. Read `mathf3-o/TESTING.md`
 4. Explore `tests/` documentation
 
 ### For Testers
-1. Read `mathf3-web/TESTING.md`
+1. Read `mathf3-o/TESTING.md`
 2. Read `tests/README.md`
 3. Choose test type:
    - Simple: `tests/SIMPLE-TEST.md`
@@ -207,16 +200,16 @@ README.md (Root)
 ## 🔍 Finding Things
 
 ### "Where is the math logic?"
-→ `mathf3-web/src/lib/math.js`
+→ `mathf3-o/src/lib/math.js`
 
 ### "Where are the AI tools?"
-→ `mathf3-web/src/lib/aiTools.js`
+→ `mathf3-o/src/lib/aiTools.js`
 
 ### "Where are the tests?"
-→ `mathf3-web/tests/`
+→ `mathf3-o/tests/`
 
 ### "Where is the UI?"
-→ `mathf3-web/src/chapters/` and `mathf3-web/src/components/`
+→ `mathf3-o/src/chapters/` and `mathf3-o/src/components/`
 
 ### "Where are the Python scripts?"
 → `python-scripts/`
@@ -243,14 +236,14 @@ README.md (Root)
 
 ### To Run the App
 ```bash
-cd mathf3-web
+cd mathf3-o
 npm install
 npm run dev
 ```
 
 ### To Run Tests
 ```bash
-cd mathf3-web
+cd mathf3-o
 npm run test:advanced:quick
 ```
 

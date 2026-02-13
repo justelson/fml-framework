@@ -20,7 +20,7 @@ Visit: http://localhost:5173
 ## 📁 Project Structure
 
 ```
-mathf3-web/
+mathf3-o/
 ├── src/
 │   ├── chapters/           # 8 math chapters
 │   │   ├── Chapter1_2.jsx  # Relations & Functions, Algebra
@@ -202,7 +202,9 @@ Results saved to `tests/results/`:
 
 ## 📖 Documentation
 
-- [TESTING.md](./TESTING.md) - Testing guide
+For detailed technical and user guides, see the [Documentation Index](./docs/README.md).
+
+- [Testing Overview](./docs/testing/TESTING.md) - Testing guide
 - [tests/README.md](./tests/README.md) - Test system docs
 - [tests/SIMPLE-TEST.md](./tests/SIMPLE-TEST.md) - Simple test guide
 - [tests/ADVANCED-TEST.md](./tests/ADVANCED-TEST.md) - Advanced test guide

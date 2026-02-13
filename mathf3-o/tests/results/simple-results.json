@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "success": true,
+      "tool": "calculateLinearY"
+    },
+    {
+      "id": 2,
+      "success": true,
+      "tool": "solveQuadraticRoots"
+    },
+    {
+      "id": 3,
+      "success": true,
+      "tool": "findQuadraticVertex"
+    },
+    {
+      "id": 4,
+      "success": true,
+      "tool": "analyzeDataList"
+    },
+    {
+      "id": 5,
+      "success": true,
+      "tool": "calculateGroupedMean"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "total": 5,
+    "rate": "100.0"
+  }
+}

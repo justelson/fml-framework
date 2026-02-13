@@ -13,4 +13,4 @@ Original Python implementations of the math tools before web migration.
 
 ## Note
 
-These are the original Python scripts. The web application (`mathf3-web/`) is the current active version with React + Groq AI integration.
+These are the original Python scripts. The web application (`mathf3-o/`) is the current active version with React + Groq AI integration.

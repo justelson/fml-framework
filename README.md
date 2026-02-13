@@ -6,7 +6,7 @@ Interactive web application for learning Form 3 mathematics with AI-powered assi
 
 ```
 touching_grass/
-├── mathf3-web/              # Main web application (React + Vite)
+├── mathf3-o/              # Main web application (React + Vite)
 │   ├── src/                 # Source code
 │   │   ├── chapters/        # 8 math chapters
 │   │   ├── components/      # Reusable components
@@ -26,7 +26,7 @@ touching_grass/
 ### Web Application
 
 ```bash
-cd mathf3-web
+cd mathf3-o
 npm install
 npm run dev
 ```
@@ -36,7 +36,7 @@ Visit: http://localhost:5173
 ### AI Testing
 
 ```bash
-cd mathf3-web
+cd mathf3-o
 
 # Quick test (5 problems)
 npm run test:advanced:quick
@@ -45,7 +45,7 @@ npm run test:advanced:quick
 npm run test:advanced
 ```
 
-See [mathf3-web/TESTING.md](./mathf3-web/TESTING.md) for details.
+See [mathf3-o/TESTING.md](./mathf3-o/TESTING.md) for details.
 
 ## 📖 Features
 
@@ -97,7 +97,7 @@ Comprehensive AI validation with two test types:
 
 **Current Status**: 100% success rate on all tests
 
-See [mathf3-web/TESTING.md](./mathf3-web/TESTING.md) for complete guide.
+See [mathf3-o/TESTING.md](./mathf3-o/TESTING.md) for complete guide.
 
 ## 🛠️ Technology Stack
 
@@ -119,23 +119,23 @@ See [mathf3-web/TESTING.md](./mathf3-web/TESTING.md) for complete guide.
 
 ## 📝 Documentation
 
-- [Main Testing Guide](./mathf3-web/TESTING.md) - Quick start & overview
-- [Test System README](./mathf3-web/tests/README.md) - Detailed test docs
-- [Simple Test Guide](./mathf3-web/tests/SIMPLE-TEST.md) - Tool selection testing
-- [Advanced Test Guide](./mathf3-web/tests/ADVANCED-TEST.md) - Full validation
+- [Main Testing Guide](./mathf3-o/TESTING.md) - Quick start & overview
+- [Test System README](./mathf3-o/tests/README.md) - Detailed test docs
+- [Simple Test Guide](./mathf3-o/tests/SIMPLE-TEST.md) - Tool selection testing
+- [Advanced Test Guide](./mathf3-o/tests/ADVANCED-TEST.md) - Full validation
 
 ## 🔧 Development
 
 ### Install Dependencies
 
 ```bash
-cd mathf3-web
+cd mathf3-o
 npm install
 ```
 
 ### Environment Setup
 
-Create `mathf3-web/.env`:
+Create `mathf3-o/.env`:
 ```
 VITE_GROQ_API_KEY=your_groq_api_key_here
 GROQ_API_KEY=your_groq_api_key_here
@@ -228,7 +228,7 @@ Educational project for Form 3 mathematics learning.
 ## 📞 Support
 
 For issues or questions:
-1. Check [TESTING.md](./mathf3-web/TESTING.md)
+1. Check [TESTING.md](./mathf3-o/TESTING.md)
 2. Review test documentation
 3. Run diagnostic tests
 4. Check console for errors

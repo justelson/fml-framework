@@ -106,7 +106,7 @@ Score: 100/100
 ## 📁 Project Structure
 
 ```
-mathf3-web/
+mathf3-o/
 ├── tests/
 │   ├── data/
 │   │   ├── tool-definitions.json    # AI tool schemas
