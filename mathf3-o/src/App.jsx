@@ -186,6 +186,14 @@ export default function App() {
                 </NavLink>
               ))}
               <ThemeToggle theme={theme} setTheme={setTheme} />
+              <a
+                href="/"
+                className="tab-button full-width portal-link"
+                style={{ textDecoration: 'none' }}
+                aria-label="Back to main portal"
+              >
+                Main Portal
+              </a>
             </nav>
           </Reveal>
 
