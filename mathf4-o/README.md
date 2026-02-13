@@ -1,120 +1,97 @@
-# fml4 -o - Form 4 Basic Mathematics (Old Syllabus)
+﻿# MathF4-O (Form 4 Basic Mathematics, Old Syllabus)
 
-Interactive learning platform for Form 4 Mathematics with AI-powered assistance and comprehensive visualizations.
+Interactive Form 4 math learning web app with AI-assisted solving and richer visual modules.
 
-## 🚀 Quick Start
+## What the app does
+
+The app combines chapter-based learning with an AI assistant that interprets natural-language math questions, dispatches them to specialized tools, and returns computed answers with explanations. It includes topics like coordinate geometry, 3D figures, probability, trigonometry, vectors, matrices, and linear programming.
+
+## Files ready
+
+Key runtime files:
+- `src/App.jsx`
+- `src/chapters/` (Chapter1..Chapter8, Home, AIAssist, Settings)
+- `src/lib/math.js` (core math functions)
+- `src/lib/aiTools.js` (AI tool definitions)
+- `src/lib/toolDispatcher.js` (tool execution)
+- `src/lib/groqService.js` (Groq integration)
+
+Key test/docs files:
+- `tests/simple-test.js`
+- `tests/advanced-test.js`
+- `tests/verify-tools.js`
+- `tests/data/`
+- `docs/README.md`
+
+## Install and run
+
+Prerequisites:
+- Node.js 18+
+- npm 9+
 
 ```bash
-# Install dependencies
 npm install
-
-# Create .env file with your Groq API key
-echo "VITE_GROQ_API_KEY=your_key_here" > .env
-
-# Start development server
+cp .env.example .env        # macOS/Linux
+# copy .env.example .env    # Windows PowerShell/cmd
+# set your key in .env
 npm run dev
 ```
 
-Visit: http://localhost:5173
+Local URL:
+- `http://localhost:5173`
 
-## 📖 Documentation
-
-For detailed technical and user guides, see the [Documentation Index](./docs/README.md).
-
-## 📁 Project Structure
-
-```
-mathf4-o/
-├── src/
-│   ├── chapters/           # 8 math chapters + Home + AIAssist + Settings
-│   │   ├── Chapter1.jsx    # Coordinate Geometry
-│   │   ├── Chapter2.jsx    # Areas & Perimeters
-│   │   ├── Chapter3.jsx    # 3D Figures
-│   │   ├── Chapter4.jsx    # Probability
-│   │   ├── Chapter5.jsx    # Trigonometry
-│   │   ├── Chapter6.jsx    # Vectors
-│   │   ├── Chapter7.jsx    # Matrices
-│   │   ├── Chapter8.jsx    # Linear Programming
-│   │   ├── AIAssist.jsx    # AI Assistant
-│   │   └── Settings.jsx    # Documentation & API Config
-│   ├── components/         # Reusable UI components
-│   │   ├── Container.jsx   # Section wrapper
-│   │   ├── Reveal.jsx      # Animation wrapper
-│   │   └── ThemeToggle.jsx # Theme switcher
-│   ├── lib/                # Core functionality
-│   │   ├── math.js         # 45+ math functions
-│   │   ├── aiTools.js      # AI tool definitions (JSON Schema)
-│   │   ├── aiAssist.js     # AI Logic & tool dispatcher
-│   │   └── groqService.js  # Groq API integration
-│   ├── data/               # Documentation JSONs
-│   │   ├── userDocs.json
-│   │   └── developerDocs.json
-│   ├── App.jsx             # Main application shell
-│   └── index.css           # Global design system
-├── tests/                  # Automated test suite
-│   ├── simple-test.js      # Tool selection tests
-│   └── advanced-test.js    # Logic & answer validation
-├── .env.example            # Environment template
-├── package.json            # Scripts & dependencies
-└── vite.config.js          # Vite configuration
-```
-
-## 🎯 Features
-
-### 8 Mathematics Chapters
-1. **Coordinate Geometry**: Gradients, distance, midpoint, midpoint, line equations.
-2. **Areas & Perimeters**: Triangles, quadrilaterals, polygons, circles, similar shapes.
-3. **3D Figures**: Cylinders, cones, spheres, pyramids, prisms.
-4. **Probability**: Combined events, mutually exclusive, independent.
-5. **Trigonometry**: Sine and Cosine rules, 3D TRIG.
-6. **Vectors**: Magnitude, direction, addition/subtraction.
-7. **Matrices**: Determinants, inverse, transformations.
-8. **Linear Programming**: Inequalities and optimization.
-
-### AI Assistant
-- Natural language problem solving.
-- 45+ specialized math tools.
-- Step-by-step explanations (Steps) and simplified analogies (Lazyplain).
-- Automatic tool selection using Groq Llama 3.3.
-
-### Interactive Visualizations
-- **Mafs**: Geometry and vectors.
-- **Three.js**: 3D figure manipulation.
-- **Recharts**: Data and optimization regions.
-
-## 🧪 Testing
-
-### Simple Tests (Tool Selection)
-```bash
-npm run test:simple quick
-```
-
-### Advanced Tests (Answer Validation)
-```bash
-npm run test:advanced quick
-```
-
-## 🔧 Configuration
-
-### Environment Variables
-Create a `.env` file:
+Environment variable:
 ```env
 VITE_GROQ_API_KEY=your_groq_api_key_here
 ```
 
-### Settings Page
-Manage your API key and view full documentation directly in the app via the **Settings** tab.
+## Test commands
 
-## 🐛 Troubleshooting
+```bash
+npm run test:simple
+npm run test:simple:quick
+npm run test:advanced
+npm run test:advanced:quick
+npm run test:advanced:random
+```
 
-### AI Not Responding
-- Check if your API key is correctly set in Settings.
-- Ensure you have an active internet connection.
-- Verify Groq API limits.
+## Self-deploy anywhere
 
-### Visualizations Frozen
-- Refresh the page to reset the Mafs/Three.js canvases.
+Build:
+```bash
+npm install
+npm run build
+```
 
-## 📄 License
+Deploy output:
+- `dist/`
 
-Educational project for Form 4 mathematics. Built with the FML Framework.
+Set env var on host:
+- `VITE_GROQ_API_KEY`
+
+Platform notes:
+1. Vercel: Root `mathf4-o`, build `npm run build`, output `dist`
+2. Netlify: Base `mathf4-o`, build `npm run build`, publish `dist`
+3. Cloudflare Pages: Build `npm run build`, output `dist`
+4. Any static host: serve `dist/` and route SPA requests to `index.html`
+
+## Pull request instructions
+
+1. Branch from `main`.
+2. Keep changes focused by topic.
+3. Run `npm run build` and at least `npm run test:advanced:quick`.
+4. Open PR with summary, test output, and screenshots for UI changes.
+
+## Security and credentials
+
+- Do not commit `.env`.
+- Keep docs/examples on placeholder values only.
+- Repository check confirms no committed live private keys in tracked files.
+
+## License
+
+MIT License. See `../LICENSE`.
+
+## Short description for sharing
+
+MathF4-O is an AI-assisted Form 4 math app that turns plain-language questions into tool-based calculations with clear, step-by-step answers and interactive visual chapters.

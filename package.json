@@ -1,0 +1,9 @@
+{
+  "name": "fml-hub",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Root build orchestrator for FML portal + mathf3 + mathf4",
+  "scripts": {
+    "build": "node scripts/build-vercel.mjs"
+  }
+}

@@ -1,244 +1,190 @@
-# MathF3 - Form 3 Mathematics Learning Platform
+# FML Framework Math Apps
 
-Interactive web application for learning Form 3 mathematics with AI-powered assistance.
+Reusable Formula Math Library (FML) framework plus two deployable web apps:
+- `mathf3-o`: Form 3 Basic Mathematics
+- `mathf4-o`: Form 4 Basic Mathematics (old syllabus)
 
-## 📚 Project Structure
+Repository URL:
+- Primary: `https://github.com/justelson/fml-framework`
+- Redirecting legacy URL: `https://github.com/justelson/fml-3o`
 
-```
+## What the app does
+
+This project delivers AI-assisted math learning apps where students ask natural-language questions, the app picks a matching math tool, computes results, and explains the answer step by step. It combines curriculum chapters, interactive visualizations, and automated validation tests for tool selection and answer quality.
+
+## What is ready right now
+
+Framework files ready in `fml-framework/`:
+- Formula modules: `algebra.py`, `geometry.py`, `statistics.py`, `sequences.py`, `accounting.py`, `earth_geometry.py`, `trigonometry.py`, `vectors.py`, `matrices.py`, `probability.py`
+- Agent/workflow guidance: `AGENT_GUIDE.md`
+- Reusable templates:
+  - `templates/base-app/` (Vite + React starter)
+  - `templates/chapter-template.jsx`
+  - `templates/ai-tools-template.js`
+
+Application files ready:
+- `mathf3-o/` complete React + Vite app (chapters, AI assistant, tests, docs)
+- `mathf4-o/` complete React + Vite app (chapters, AI assistant, tests, docs)
+- `.agent/workflows/` prompt/workflow docs used to generate and extend new math apps
+
+## Repository structure
+
+```text
 touching_grass/
-├── mathf3-o/              # Main web application (React + Vite)
-│   ├── src/                 # Source code
-│   │   ├── chapters/        # 8 math chapters
-│   │   ├── components/      # Reusable components
-│   │   └── lib/             # Math functions & AI tools
-│   ├── tests/               # AI testing suite
-│   │   ├── data/            # Test problems & tool definitions
-│   │   ├── results/         # Test results (auto-generated)
-│   │   └── *.js             # Test runners
-│   └── public/              # Static assets
-├── python-scripts/          # Original Python implementations
-├── textbook/                # PDF textbook reference
-└── requirements.txt         # Python dependencies
+|- fml-framework/          # Formula-first reusable framework
+|- mathf3-o/               # Form 3 web app
+|- mathf4-o/               # Form 4 web app
+|- python-scripts/         # Older Python implementations/reference
+|- textbook/               # Curriculum source material
+|- README.md
+|- LICENSE
 ```
 
-## 🚀 Quick Start
+## Install and run locally
 
-### Web Application
+Prerequisites:
+- Node.js 18+ and npm 9+
+- Optional: Python 3.10+ for legacy `python-scripts/`
 
+1. Clone:
+```bash
+git clone https://github.com/justelson/fml-framework.git
+cd touching_grass
+```
+
+2. Run Form 3 app:
 ```bash
 cd mathf3-o
 npm install
+cp .env.example .env        # macOS/Linux
+# copy .env.example .env    # Windows PowerShell/cmd
+# edit .env and set your key
 npm run dev
 ```
 
-Visit: http://localhost:5173
-
-### AI Testing
-
+3. Run Form 4 app:
 ```bash
-cd mathf3-o
-
-# Quick test (5 problems)
-npm run test:advanced:quick
-
-# Full test (25 problems)
-npm run test:advanced
-```
-
-See [mathf3-o/TESTING.md](./mathf3-o/TESTING.md) for details.
-
-## 📖 Features
-
-### 8 Mathematics Chapters
-
-1. **Relations & Functions** - Domain, range, function types
-2. **Algebra** - Linear & quadratic equations, graphs
-3. **Statistics** - Mean, median, mode (raw & grouped data)
-4. **Rates & Variations** - Direct & inverse variation
-5. **Sequences & Series** - AP, GP, compound interest
-6. **Circles** - Area, circumference, arc, sector, chord
-7. **Earth Geometry** - Great circle, small circle, haversine
-8. **Accounting** - Balance sheet, accounting equation
-
-### AI Assistant
-
-- **Natural Language Interface** - Ask questions in plain English
-- **20 Math Tools** - Specialized calculation functions
-- **Automatic Tool Selection** - AI picks the right tool
-- **Real-time Answers** - Instant computed results
-- **Chat History** - Track your conversation
-- **Example Questions** - Quick start templates
-- **Groq Integration** - Fast AI responses (Llama 3.3 70B)
-- **Answer Validation** - Verified computations
-
-### Interactive Learning
-
-- **Visual Charts** - Plot functions and sequences
-- **Step-by-Step** - Detailed solution explanations
-- **Practice Problems** - Built-in exercises
-- **Dark Mode** - Eye-friendly interface
-- **Responsive** - Works on all devices
-
-## 🧪 Testing System
-
-Comprehensive AI validation with two test types:
-
-### Simple Test (Tool Selection)
-- Validates AI selects correct tools
-- Pass/Fail scoring
-- Fast execution (~2 sec/test)
-
-### Advanced Test (Full Validation)
-- Validates tool selection + answer accuracy
-- 50% tool + 50% answer = 100%
-- Handles ambiguous questions
-- Random test selection
-- Difficulty filtering
-
-**Current Status**: 100% success rate on all tests
-
-See [mathf3-o/TESTING.md](./mathf3-o/TESTING.md) for complete guide.
-
-## 🛠️ Technology Stack
-
-### Frontend
-- **React 18** - UI framework
-- **Vite** - Build tool
-- **Chart.js** - Data visualization
-- **KaTeX** - Math rendering
-
-### AI Integration
-- **Groq SDK** - AI API client
-- **Llama 3.3 70B** - Language model
-- **Function Calling** - Tool selection
-
-### Testing
-- **Node.js** - Test runner
-- **dotenv** - Environment config
-- **Custom validators** - Answer checking
-
-## 📝 Documentation
-
-- [Main Testing Guide](./mathf3-o/TESTING.md) - Quick start & overview
-- [Test System README](./mathf3-o/tests/README.md) - Detailed test docs
-- [Simple Test Guide](./mathf3-o/tests/SIMPLE-TEST.md) - Tool selection testing
-- [Advanced Test Guide](./mathf3-o/tests/ADVANCED-TEST.md) - Full validation
-
-## 🔧 Development
-
-### Install Dependencies
-
-```bash
-cd mathf3-o
+cd ../mathf4-o
 npm install
+cp .env.example .env        # macOS/Linux
+# copy .env.example .env    # Windows PowerShell/cmd
+# edit .env and set your key
+npm run dev
 ```
 
-### Environment Setup
-
-Create `mathf3-o/.env`:
-```
+4. Required environment variable for both apps:
+```env
 VITE_GROQ_API_KEY=your_groq_api_key_here
-GROQ_API_KEY=your_groq_api_key_here
 ```
 
-Get free API key: https://console.groq.com/keys
+## Self-deploy anywhere
 
-### Run Development Server
+Both apps are static Vite builds and can be deployed on any static hosting provider.
 
+Build command (per app):
 ```bash
-npm run dev
-```
-
-### Build for Production
-
-```bash
+npm install
 npm run build
-npm run preview
 ```
 
-### Run Tests
+Publish directory:
+- `dist`
 
+Required environment variable:
+- `VITE_GROQ_API_KEY`
+
+Provider quick settings:
+1. Vercel
+- Root directory: `mathf3-o` or `mathf4-o`
+- Build command: `npm run build`
+- Output: `dist`
+
+2. Netlify
+- Base directory: `mathf3-o` or `mathf4-o`
+- Build command: `npm run build`
+- Publish directory: `dist`
+
+3. Cloudflare Pages
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Set environment variable in project settings
+
+4. Render Static Site / Railway static / any static host
+- Build in app folder
+- Upload or serve `dist/`
+- Configure SPA fallback to `index.html`
+
+5. Docker self-host
+- Build app, then serve `dist/` with Nginx, Caddy, or any static file server
+
+## Single Vercel hub deployment
+
+This repository now supports one Vercel deployment that serves:
+- `/` -> FML portal landing page
+- `/3o/` -> full Form 3 app
+- `/4o/` -> full Form 4 app
+
+Root deployment setup:
+1. Import this repository in Vercel.
+2. Use root settings:
+- Build command: `npm run build`
+- Output directory: `deploy`
+3. Add project environment variable:
+- `VITE_GROQ_API_KEY`
+4. Deploy.
+
+The root build script (`scripts/build-vercel.mjs`) automatically:
+- Builds `mathf3-o` with base `/3o/`
+- Builds `mathf4-o` with base `/4o/`
+- Copies both outputs plus the portal page into `deploy/`
+
+Routing fallback for deep links is handled by `vercel.json`.
+
+Official deployment branch policy:
+- Use `official-deployment` as the production deployment branch in Vercel.
+- That branch must be synced from approved `main` changes.
+- See `DEPLOYMENT_POLICY.md` for the required workflow.
+
+## Pull request instructions
+
+1. Fork the repository.
+2. Create a branch from `main`:
 ```bash
-# Simple test
-npm run test:simple:quick
-
-# Advanced test
-npm run test:advanced:quick
-
-# Random tests
-npm run test:advanced:random
-
-# By difficulty
-npm run test:advanced:easy
-npm run test:advanced:medium
-npm run test:advanced:hard
+git checkout -b feat/short-description
 ```
+3. Make focused changes in the relevant folder (`fml-framework/`, `mathf3-o/`, or `mathf4-o/`).
+4. Run checks before pushing:
+```bash
+# Form 3
+cd mathf3-o && npm run build && npm run test:advanced:quick
 
-## 📚 Learning Resources
+# Form 4
+cd ../mathf4-o && npm run build && npm run test:advanced:quick
+```
+5. Commit with a clear message and push.
+6. Open a PR to `main` with:
+- Scope summary
+- Screenshots for UI changes
+- Test commands run and results
+- Any new env vars or deployment impact
 
-### Textbook
-PDF reference located in `textbook/` folder:
-- Basic maths F3 Wazaelimu.com.pdf
+## Security and key handling
 
-### Python Scripts
-Original implementations in `python-scripts/`:
-- GUI applications
-- Command-line tools
-- AI integrations (Gemini, NBLM, Studio)
+Private-key status check completed on February 13, 2026:
+- No committed live API keys or private key files were found in tracked files.
+- The repository only contains placeholder values like `your_groq_api_key_here` in docs/examples.
+- `.env` files should remain local and must never be committed.
 
-## 🎯 Use Cases
+If a real key was ever exposed outside this repo, rotate it immediately in the provider dashboard.
 
-### Students
-- Learn Form 3 mathematics interactively
-- Get AI help with homework
-- Practice with instant feedback
-- Visualize mathematical concepts
+## License
 
-### Teachers
-- Demonstrate concepts visually
-- Generate practice problems
-- Verify student solutions
-- Create interactive lessons
+This project is licensed under the MIT License. See `LICENSE`.
 
-### Developers
-- Study AI tool integration
-- Learn function calling patterns
-- Explore math computation
-- Test AI reliability
+## Submission text (ready to copy)
 
-## 🤝 Contributing
+Full description:
+FML Framework is a reusable formula-first system for building math education apps. This repo includes two production-ready React apps (`mathf3-o` and `mathf4-o`) where learners ask math questions in plain language, AI routes requests to validated math tools, and the app returns explained results with interactive visuals. Source: `https://github.com/justelson/fml-framework`.
 
-1. Fork the repository
-2. Create feature branch
-3. Make changes
-4. Run tests: `npm run test:advanced`
-5. Submit pull request
-
-## 📄 License
-
-Educational project for Form 3 mathematics learning.
-
-## 🙏 Acknowledgments
-
-- Textbook: Wazaelimu.com
-- AI: Groq (Llama 3.3 70B)
-- Math rendering: KaTeX
-- Charts: Chart.js
-
-## 📞 Support
-
-For issues or questions:
-1. Check [TESTING.md](./mathf3-o/TESTING.md)
-2. Review test documentation
-3. Run diagnostic tests
-4. Check console for errors
-
-## 🎉 Status
-
-✅ **Production Ready**
-- 20 math tools implemented
-- 8 chapters complete
-- AI integration working
-- 100% test success rate
-- Comprehensive documentation
-- Clean codebase structure
+Instagram-length comment:
+Built with the FML Framework: two AI-powered math learning apps (Form 3 + Form 4) that turn plain-language math questions into computed, step-by-step answers with visuals. Install with `npm install`, set `VITE_GROQ_API_KEY`, run `npm run dev`, then deploy the `dist/` build on Vercel/Netlify/Cloudflare or any static host. Open source at `https://github.com/justelson/fml-framework`.
