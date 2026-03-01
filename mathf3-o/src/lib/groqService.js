@@ -7,12 +7,13 @@ import Groq from 'groq-sdk';
 import { mathTools } from './aiTools.js';
 import { MATH_AGENT_SYSTEM_PROMPT } from './systemPrompt.js';
 import { dispatchTool } from './toolDispatcher.js';
+import { getGroqApiKey } from './apiKeyStorage.js';
 
 // Initialize Groq client
 // We will create the client dynamically to allow for runtime key updates from Settings
-const getGroqClient = () => {
+const getGroqClient = async () => {
     // 1. Check LocalStorage (User Settings)
-    const localKey = localStorage.getItem('groqApiKey');
+    const localKey = await getGroqApiKey();
     if (localKey && localKey.trim().length > 0) {
         return new Groq({ apiKey: localKey, dangerouslyAllowBrowser: true });
     }
@@ -32,7 +33,7 @@ const getGroqClient = () => {
  * @returns {Promise<any>} - The final structured result or message.
  */
 export async function getAiResponse(userPrompt) {
-    const groq = getGroqClient();
+    const groq = await getGroqClient();
 
     if (!groq) {
         throw new Error('Missing API Key. Please enter your Groq API Key in the Settings tab.');

@@ -3,6 +3,7 @@ import { Key, BookOpen, Code, Info, ExternalLink, Github, Lightbulb, Zap, Messag
 import Container from '../components/Container.jsx';
 import userDocs from '../data/userDocs.json';
 import developerDocs from '../data/developerDocs.json';
+import { clearStoredGroqApiKey, getGroqApiKey, saveGroqApiKey } from '../lib/apiKeyStorage.js';
 
 export default function Settings() {
   const [apiKey, setApiKey] = useState('');
@@ -21,19 +22,35 @@ export default function Settings() {
   }, [activeTab]);
 
   useEffect(() => {
-    const stored = window.localStorage.getItem('groqApiKey') || '';
-    setApiKey(stored);
+    let active = true;
+
+    const loadApiKey = async () => {
+      const stored = await getGroqApiKey();
+      if (active) {
+        setApiKey(stored || '');
+      }
+    };
+
+    loadApiKey();
+    return () => {
+      active = false;
+    };
   }, []);
 
-  const handleSave = () => {
+  const handleSave = async () => {
     const trimmed = apiKey.trim();
-    window.localStorage.setItem('groqApiKey', trimmed);
-    setStatus(trimmed ? 'Groq API key saved locally.' : 'Groq API key cleared.');
+    try {
+      await saveGroqApiKey(trimmed);
+      setApiKey(trimmed);
+      setStatus(trimmed ? 'Groq API key saved locally.' : 'Groq API key cleared.');
+    } catch (error) {
+      setStatus(error.message || 'Failed to save Groq API key.');
+    }
     setTimeout(() => setStatus(''), 3000);
   };
 
   const handleClear = () => {
-    window.localStorage.removeItem('groqApiKey');
+    clearStoredGroqApiKey();
     setApiKey('');
     setStatus('Groq API key removed.');
     setTimeout(() => setStatus(''), 3000);

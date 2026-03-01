@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { getAiResponse } from '../lib/groqService.js';
+import { getGroqApiKey } from '../lib/apiKeyStorage.js';
 import {
   Bot,
   User,
@@ -31,8 +32,19 @@ export default function AIAssist() {
   const textareaRef = useRef(null);
 
   useEffect(() => {
-    const stored = window.localStorage.getItem('groqApiKey') || '';
-    setApiKey(stored);
+    let active = true;
+
+    const syncApiKey = async () => {
+      const stored = await getGroqApiKey();
+      if (active) {
+        setApiKey(stored || '');
+      }
+    };
+
+    syncApiKey();
+    return () => {
+      active = false;
+    };
   }, []);
 
   useEffect(() => {
@@ -44,7 +56,12 @@ export default function AIAssist() {
 
   const handleSubmit = async () => {
     if (!question.trim()) return;
-    if (!hasKey) {
+    const latestKey = (await getGroqApiKey()) || '';
+    if (latestKey !== apiKey) {
+      setApiKey(latestKey);
+    }
+
+    if (!latestKey.trim()) {
       setMessages([...messages, {
         type: 'error',
         content: 'Please set your Groq API key in Settings first.',
