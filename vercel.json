@@ -5,11 +5,11 @@
       "handle": "filesystem"
     },
     {
-      "src": "^/3o/(.*)$",
+      "src": "^/3o(?:/.*)?$",
       "dest": "/3o/index.html"
     },
     {
-      "src": "^/4o/(.*)$",
+      "src": "^/4o(?:/.*)?$",
       "dest": "/4o/index.html"
     },
     {
